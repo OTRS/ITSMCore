@@ -1,8 +1,8 @@
 # --
-# Kernel/Language/cz_ITSMCore.pm - the cz translation of ITSMCore
+# Kernel/Language/cz_ITSMCore.pm - the czech translation of ITSMCore
 # Copyright (C) 2001-2007 OTRS GmbH, http://otrs.org/
 # --
-# $Id: cz_ITSMCore.pm,v 1.1.2.1 2007-12-10 13:40:11 mh Exp $
+# $Id: cz_ITSMCore.pm,v 1.1.2.2 2007-12-10 13:52:53 mh Exp $
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
