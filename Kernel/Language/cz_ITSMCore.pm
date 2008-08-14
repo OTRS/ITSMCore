@@ -1,8 +1,9 @@
 # --
 # Kernel/Language/cz_ITSMCore.pm - the czech translation of ITSMCore
 # Copyright (C) 2001-2008 OTRS AG, http://otrs.org/
+# Copyright (C) 2007-2008 Milen Koutev
 # --
-# $Id: cz_ITSMCore.pm,v 1.6 2008-05-21 08:39:26 mh Exp $
+# $Id: cz_ITSMCore.pm,v 1.6.2.1 2008-08-14 11:58:29 mh Exp $
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
@@ -15,7 +16,7 @@ use strict;
 use warnings;
 
 use vars qw($VERSION);
-$VERSION = qw($Revision: 1.6 $) [1];
+$VERSION = qw($Revision: 1.6.2.1 $) [1];
 
 sub Data {
     my $Self = shift;
