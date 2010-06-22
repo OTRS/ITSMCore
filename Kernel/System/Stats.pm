@@ -2,8 +2,8 @@
 # Kernel/System/Stats.pm - all stats core functions
 # Copyright (C) 2001-2010 OTRS AG, http://otrs.org/
 # --
-# $Id: Stats.pm,v 1.3 2010-03-01 12:17:23 ub Exp $
-# $OldId: Stats.pm,v 1.80.2.1 2009/09/28 13:12:39 ub Exp $
+# $Id: Stats.pm,v 1.3.2.1 2010-06-22 12:41:50 ub Exp $
+# $OldId: Stats.pm,v 1.80.2.2 2010/03/15 08:12:54 reb Exp $
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -20,7 +20,7 @@ use Date::Pcalc qw(:all);
 use Kernel::System::XML;
 
 use vars qw(@ISA $VERSION);
-$VERSION = qw($Revision: 1.3 $) [1];
+$VERSION = qw($Revision: 1.3.2.1 $) [1];
 
 =head1 SYNOPSIS
 
@@ -339,7 +339,7 @@ sub StatsGet {
 # ---
 # ITSM
 # ---
-#                        if ( $Ref->{$_} ) {
+#                        if ( $Ref->{$_} && ( !$Attribute->{$_} || $Ref->{Fixed} ) ) {
                         if ( $Ref->{$_} && ( !$Attribute->{$_} || $Ref->{Fixed} ) ) {
 # ---
                             $Attribute->{$_} = $Ref->{$_};
@@ -3221,14 +3221,14 @@ sub _GetCacheString {
 
 =head1 TERMS AND CONDITIONS
 
-This software is part of the OTRS project (http://otrs.org/).
+This software is part of the OTRS project (L<http://otrs.org/>).
 
 This software comes with ABSOLUTELY NO WARRANTY. For details, see
 the enclosed file COPYING for license information (AGPL). If you
-did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+did not receive this file, see L<http://www.gnu.org/licenses/agpl.txt>.
 
 =head1 VERSION
 
-$Revision: 1.3 $ $Date: 2010-03-01 12:17:23 $
+$Revision: 1.3.2.1 $ $Date: 2010-06-22 12:41:50 $
 
 =cut
