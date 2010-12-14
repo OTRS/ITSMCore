@@ -1,8 +1,8 @@
 # --
 # Kernel/System/LinkObject/Service.pm - to link service objects
-# Copyright (C) 2001-2009 OTRS AG, http://otrs.org/
+# Copyright (C) 2001-2010 OTRS AG, http://otrs.org/
 # --
-# $Id: Service.pm,v 1.7 2009-08-18 22:20:52 mh Exp $
+# $Id: Service.pm,v 1.7.4.1 2010-12-14 11:11:23 ub Exp $
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -17,7 +17,7 @@ use warnings;
 use Kernel::System::Service;
 
 use vars qw($VERSION);
-$VERSION = qw($Revision: 1.7 $) [1];
+$VERSION = qw($Revision: 1.7.4.1 $) [1];
 
 sub new {
     my ( $Type, %Param ) = @_;
@@ -403,6 +403,16 @@ sub LinkDeletePost {
     }
 
     return 1 if $Param{State} eq 'Temporary';
+
+    # update the current incident state type from CIs of the service
+    # in order to ensure that the dynamic incident calculation is reset after
+    # unlinking a CI which has been in an incident state
+    $Self->{ServiceObject}->ServicePreferencesSet(
+        ServiceID => $Param{Key},
+        Key       => 'CurInciStateTypeFromCIs',
+        Value     => '',
+        UserID    => 1,
+    );
 
     return 1;
 }
