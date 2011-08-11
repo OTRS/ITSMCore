@@ -1,9 +1,9 @@
 # --
 # Kernel/System/EventHandler.pm - global object events
-# Copyright (C) 2001-2010 OTRS AG, http://otrs.org/
+# Copyright (C) 2001-2011 OTRS AG, http://otrs.org/
 # --
-# $Id: EventHandler.pm,v 1.2 2010-02-04 13:19:13 ub Exp $
-# $OldId: EventHandler.pm,v 1.4 2009/12/08 16:23:46 bes Exp $
+# $Id: EventHandler.pm,v 1.2.4.1 2011-08-11 07:52:35 ub Exp $
+# $OldId: EventHandler.pm,v 1.7 2010/11/25 13:52:47 bes Exp $
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -16,7 +16,7 @@ use strict;
 use warnings;
 
 use vars qw($VERSION);
-$VERSION = qw($Revision: 1.2 $) [1];
+$VERSION = qw($Revision: 1.2.4.1 $) [1];
 
 =head1 NAME
 
@@ -82,9 +82,7 @@ Example XML config:
     </ConfigItem>
 
 =cut
-# ---
-# ITSM
-# ---
+
 =item EventHandlerInit()
 
 use vars qw(@ISA);
@@ -102,7 +100,7 @@ push @ISA, 'Kernel::System::EventHandler';
         # served default objects in any event backend
         Objects    => {
             UserObject => $UserObject,
-            XZY        => $XYZ,
+            XYZ        => $XYZ,
         },
     );
 
@@ -146,7 +144,6 @@ Example XML config:
     </ConfigItem>
 
 =cut
-# ---
 
 sub EventHandlerInit {
     my ( $Self, %Param ) = @_;
@@ -169,9 +166,7 @@ call event handler, returns true if it's executed successfully
     );
 
 =cut
-# ---
-# ITSM
-# ---
+
 =item EventHandler()
 
 call event handler, returns true if it's executed successfully
@@ -185,7 +180,6 @@ call event handler, returns true if it's executed successfully
     );
 
 =cut
-# ---
 
 sub EventHandler {
     my ( $Self, %Param ) = @_;
@@ -276,7 +270,7 @@ sub DESTROY {
 sub EventHandlerTransaction {
     my ( $Self, %Param ) = @_;
 
-    # remember, we are on destory mode, do not execute new events
+    # remember, we are in destroy mode, do not execute new events
     $Self->{EventHandlerTransaction} = 1;
 
     # execute events on end of transaction
@@ -305,16 +299,16 @@ sub EventHandlerTransaction {
 
 =head1 TERMS AND CONDITIONS
 
-This software is part of the OTRS project (http://otrs.org/).
+This software is part of the OTRS project (L<http://otrs.org/>).
 
 This software comes with ABSOLUTELY NO WARRANTY. For details, see
 the enclosed file COPYING for license information (AGPL). If you
-did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+did not receive this file, see L<http://www.gnu.org/licenses/agpl.txt>.
 
 =cut
 
 =head1 VERSION
 
-$Revision: 1.2 $ $Date: 2010-02-04 13:19:13 $
+$Revision: 1.2.4.1 $ $Date: 2011-08-11 07:52:35 $
 
 =cut
