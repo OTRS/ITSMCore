@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1" ?>
 <otrs_config version="1.0" init="Framework">
-    <CVS>$Id: FrameworkITSMCore.xml,v 1.47.2.7 2011-08-11 13:35:04 ub Exp $</CVS>
+    <CVS>$Id: FrameworkITSMCore.xml,v 1.47.2.8 2012-08-21 08:25:58 ub Exp $</CVS>
     <CVS>$OldId: Framework.xml,v 1.242.2.8 2010/12/22 23:43:47 dz Exp $</CVS>
     <ConfigItem Name="ProductName" Required="1" Valid="1">
         <Description Lang="en">This setting controls the name of the application as is shown in the web interface as well as the tabs and title bar of your web browser.</Description>
@@ -8,7 +8,7 @@
         <Group>Framework</Group>
         <SubGroup>Core</SubGroup>
         <Setting>
-            <String Regex="">OTRS::ITSM 2.1.4</String>
+            <String Regex="">OTRS::ITSM 2.1.5</String>
         </Setting>
     </ConfigItem>
     <ConfigItem Name="LinkObject::ViewMode" Required="1" Valid="1">
