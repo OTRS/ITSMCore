@@ -2,7 +2,7 @@
 # Kernel/System/Service.pm - all service function
 # Copyright (C) 2001-2013 OTRS AG, http://otrs.org/
 # --
-# $Id: Service.pm,v 1.34.2.1 2013-03-23 14:13:17 ub Exp $
+# $Id: Service.pm,v 1.34.2.2 2013-03-26 16:22:32 ub Exp $
 # $OldId: Service.pm,v 1.50.2.3 2012/09/21 08:14:10 mb Exp $
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
@@ -27,7 +27,8 @@ use Kernel::System::LinkObject;
 use Kernel::System::Time;
 # ---
 
-use vars qw(@ISA);
+use vars qw(@ISA $VERSION);
+$VERSION = qw($Revision: 1.34.2.2 $) [1];
 
 =head1 NAME
 
@@ -178,7 +179,7 @@ sub ServiceList {
     my %ServiceListTmp = %ServiceList;
 
     # add suffix for correct sorting
-    for my $ServiceID ( sort keys %ServiceListTmp ) {
+    for my $ServiceID ( keys %ServiceListTmp ) {
         $ServiceListTmp{$ServiceID} .= '::';
     }
 
@@ -196,10 +197,10 @@ sub ServiceList {
     }
 
     # delete invalid services and childs
-    for my $ServiceID ( sort keys %ServiceList ) {
+    for my $ServiceID ( keys %ServiceList ) {
 
         INVALIDNAME:
-        for my $InvalidName ( sort keys %ServiceInvalidList ) {
+        for my $InvalidName ( keys %ServiceInvalidList ) {
 
             if ( $ServiceList{$ServiceID} =~ m{ \A \Q$InvalidName\E :: }xms ) {
                 delete $ServiceList{$ServiceID};
@@ -1117,7 +1118,7 @@ sub CustomerUserServiceMemberList {
     }
 
     # db quote
-    for ( sort keys %Param ) {
+    for ( keys %Param ) {
         $Param{$_} = $Self->{DBObject}->Quote( $Param{$_} );
     }
     for (qw(ServiceID)) {
@@ -1581,5 +1582,11 @@ This software is part of the OTRS project (L<http://otrs.org/>).
 This software comes with ABSOLUTELY NO WARRANTY. For details, see
 the enclosed file COPYING for license information (AGPL). If you
 did not receive this file, see L<http://www.gnu.org/licenses/agpl.txt>.
+
+=cut
+
+=head1 VERSION
+
+$Revision: 1.34.2.2 $ $Date: 2013-03-26 16:22:32 $
 
 =cut
