@@ -2,7 +2,7 @@
 # Kernel/System/Service.pm - all service function
 # Copyright (C) 2001-2013 OTRS AG, http://otrs.org/
 # --
-# $Id: Service.pm,v 1.38 2013-06-13 08:47:57 ub Exp $
+# $Id: Service.pm,v 1.38.2.1 2013-07-03 14:15:29 ub Exp $
 # $OldId: Service.pm,v 1.60 2012/11/20 15:38:02 mh Exp $
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
@@ -196,14 +196,16 @@ sub ServiceList {
     }
 
     # delete invalid services and childs
-    for my $ServiceID ( sort keys %ServiceList ) {
+    if ( !defined $Param{KeepChildren} || !$Param{KeepChildren} ) {
+        for my $ServiceID ( sort keys %ServiceList ) {
 
-        INVALIDNAME:
-        for my $InvalidName ( sort keys %ServiceInvalidList ) {
+            INVALIDNAME:
+            for my $InvalidName ( sort keys %ServiceInvalidList ) {
 
-            if ( $ServiceList{$ServiceID} =~ m{ \A \Q$InvalidName\E :: }xms ) {
-                delete $ServiceList{$ServiceID};
-                last INVALIDNAME;
+                if ( $ServiceList{$ServiceID} =~ m{ \A \Q$InvalidName\E :: }xms ) {
+                    delete $ServiceList{$ServiceID};
+                    last INVALIDNAME;
+                }
             }
         }
     }
