@@ -2,7 +2,7 @@
 # Kernel/System/Service.pm - all service function
 # Copyright (C) 2001-2013 OTRS AG, http://otrs.org/
 # --
-# $Id: Service.pm,v 1.34.2.2 2013-03-26 16:22:32 ub Exp $
+# $Id: Service.pm,v 1.34.2.3 2013-07-03 12:34:08 ub Exp $
 # $OldId: Service.pm,v 1.50.2.3 2012/09/21 08:14:10 mb Exp $
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
@@ -28,7 +28,7 @@ use Kernel::System::Time;
 # ---
 
 use vars qw(@ISA $VERSION);
-$VERSION = qw($Revision: 1.34.2.2 $) [1];
+$VERSION = qw($Revision: 1.34.2.3 $) [1];
 
 =head1 NAME
 
@@ -152,7 +152,7 @@ sub ServiceList {
     # read cache
     my $CacheKey = 'ServiceList::' . $Param{Valid};
     my $Cache = $Self->{CacheInternalObject}->Get( Key => $CacheKey );
-    return %{$Cache} if $Cache;
+    return %{$Cache} if ref $Cache eq 'HASH';
 
     # ask database
     $Self->{DBObject}->Prepare(
@@ -483,7 +483,7 @@ sub ServiceGet {
     $CacheKey .= '::IncidentState::' . $Param{IncidentState};
 # ---
     my $Cache = $Self->{CacheInternalObject}->Get( Key => $CacheKey );
-    return %{$Cache} if $Cache;
+    return %{$Cache} if ref $Cache eq 'HASH';
 
     # get service from db
     $Self->{DBObject}->Prepare(
@@ -1111,10 +1111,10 @@ sub CustomerUserServiceMemberList {
     # check cache
     my $Cache = $Self->{CacheInternalObject}->Get( Key => $CacheKey );
     if ( $Param{Result} eq 'HASH' ) {
-        return %{$Cache} if $Cache;
+        return %{$Cache} if ref $Cache eq 'HASH';
     }
     else {
-        return @{$Cache} if $Cache;
+        return @{$Cache} if ref $Cache eq 'ARRAY';
     }
 
     # db quote
@@ -1309,7 +1309,7 @@ sub ServiceParentsGet {
     # read cache
     my $CacheKey = 'ServiceParentsGet::' . $Param{ServiceID};
     my $Cache = $Self->{CacheInternalObject}->Get( Key => $CacheKey );
-    return %{$Cache} if $Cache;
+    return $Cache if ref $Cache;
 
     # get the list of services
     my $ServiceList = $Self->ServiceListGet(
@@ -1587,6 +1587,6 @@ did not receive this file, see L<http://www.gnu.org/licenses/agpl.txt>.
 
 =head1 VERSION
 
-$Revision: 1.34.2.2 $ $Date: 2013-03-26 16:22:32 $
+$Revision: 1.34.2.3 $ $Date: 2013-07-03 12:34:08 $
 
 =cut
