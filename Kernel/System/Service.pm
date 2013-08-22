@@ -149,7 +149,12 @@ sub ServiceList {
     }
 
     # read cache
-    my $CacheKey = 'ServiceList::' . $Param{Valid};
+    my $CacheKey = 'ServiceList::Valid::' . $Param{Valid};
+
+    if ( defined $Param{KeepChildren} && $Param{KeepChildren} eq '1' ) {
+        $CacheKey .= '::KeepChildren::' . $Param{KeepChildren};
+    }
+
     my $Cache = $Self->{CacheInternalObject}->Get( Key => $CacheKey );
     return %{$Cache} if ref $Cache eq 'HASH';
 
