@@ -3,7 +3,7 @@
 # bin/otrs.AddService.pl - add new Services
 # Copyright (C) 2001-2014 OTRS AG, http://otrs.com/
 # --
-# $origin: https://github.com/OTRS/otrs/blob/dc3029ebfd89299b3a26e1c72c4f092e6a4454c5/bin/otrs.AddService.pl
+# $origin: https://github.com/OTRS/otrs/blob/704d68553b3b28f2bc961b32c5a2932170efffbd/bin/otrs.AddService.pl
 # --
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU AFFERO General Public License as published by
@@ -50,10 +50,9 @@ my %Param;
 my %CommonObject;
 
 # create common objects
-$CommonObject{ConfigObject} = Kernel::Config->new();
-$CommonObject{EncodeObject} = Kernel::System::Encode->new(%CommonObject);
-$CommonObject{LogObject}
-    = Kernel::System::Log->new( %CommonObject, LogPrefix => 'OTRS-otrs.AddService' );
+$CommonObject{ConfigObject}  = Kernel::Config->new();
+$CommonObject{EncodeObject}  = Kernel::System::Encode->new(%CommonObject);
+$CommonObject{LogObject}     = Kernel::System::Log->new( %CommonObject, LogPrefix => 'OTRS-otrs.AddService' );
 $CommonObject{MainObject}    = Kernel::System::Main->new(%CommonObject);
 $CommonObject{DBObject}      = Kernel::System::DB->new(%CommonObject);
 $CommonObject{ServiceObject} = Kernel::System::Service->new(%CommonObject);

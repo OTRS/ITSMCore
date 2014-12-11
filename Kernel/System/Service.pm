@@ -2,7 +2,7 @@
 # Kernel/System/Service.pm - all service function
 # Copyright (C) 2001-2014 OTRS AG, http://otrs.com/
 # --
-# $origin: https://github.com/OTRS/otrs/blob/dc3029ebfd89299b3a26e1c72c4f092e6a4454c5/Kernel/System/Service.pm
+# $origin: https://github.com/OTRS/otrs/blob/704d68553b3b28f2bc961b32c5a2932170efffbd/Kernel/System/Service.pm
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -194,7 +194,10 @@ sub ServiceList {
     }
 
     if ( !$Param{Valid} ) {
-        $Self->{CacheInternalObject}->Set( Key => $CacheKey, Value => \%ServiceList );
+        $Self->{CacheInternalObject}->Set(
+            Key   => $CacheKey,
+            Value => \%ServiceList
+        );
         return %ServiceList if !$Param{Valid};
     }
 
@@ -238,7 +241,10 @@ sub ServiceList {
     }
 
     # set cache
-    $Self->{CacheInternalObject}->Set( Key => $CacheKey, Value => \%ServiceList );
+    $Self->{CacheInternalObject}->Set(
+        Key   => $CacheKey,
+        Value => \%ServiceList
+    );
 
     return %ServiceList;
 }
@@ -742,7 +748,9 @@ sub ServiceAdd {
 
     # get parent name
     if ( $Param{ParentID} ) {
-        my $ParentName = $Self->ServiceLookup( ServiceID => $Param{ParentID}, );
+        my $ParentName = $Self->ServiceLookup(
+            ServiceID => $Param{ParentID},
+        );
         if ($ParentName) {
             $Param{FullName} = $ParentName . '::' . $Param{Name};
         }
@@ -869,7 +877,9 @@ sub ServiceUpdate {
     }
 
     # get old name of service
-    my $OldServiceName = $Self->ServiceLookup( ServiceID => $Param{ServiceID}, );
+    my $OldServiceName = $Self->ServiceLookup(
+        ServiceID => $Param{ServiceID},
+    );
 
     if ( !$OldServiceName ) {
         $Self->{LogObject}->Log(
@@ -966,7 +976,7 @@ sub ServiceUpdate {
     for my $Child (@Childs) {
         $Child->{Name} =~ s{ \A ( \Q$OldServiceName\E ) :: }{$Param{FullName}::}xms;
         $Self->{DBObject}->Do(
-            SQL => 'UPDATE service SET name = ? WHERE id = ?',
+            SQL  => 'UPDATE service SET name = ? WHERE id = ?',
             Bind => [ \$Child->{Name}, \$Child->{ServiceID} ],
         );
     }
@@ -1011,8 +1021,7 @@ sub ServiceSearch {
     $Param{Limit} ||= 1000;
 
     # create sql query
-    my $SQL
-        = "SELECT id FROM service WHERE valid_id IN ( ${\(join ', ', $Self->{ValidObject}->ValidIDsGet())} )";
+    my $SQL = "SELECT id FROM service WHERE valid_id IN ( ${\(join ', ', $Self->{ValidObject}->ValidIDsGet())} )";
 
     if ( $Param{Name} ) {
 
@@ -1114,8 +1123,7 @@ sub CustomerUserServiceMemberList {
     }
 
     # get options for default services for unknown customers
-    my $DefaultServiceUnknownCustomer
-        = $Self->{ConfigObject}->Get('Ticket::Service::Default::UnknownCustomer');
+    my $DefaultServiceUnknownCustomer = $Self->{ConfigObject}->Get('Ticket::Service::Default::UnknownCustomer');
     if (
         $DefaultServiceUnknownCustomer
         && $Param{DefaultServices}
@@ -1208,7 +1216,10 @@ sub CustomerUserServiceMemberList {
 
     # return result
     if ( $Param{Result} eq 'HASH' ) {
-        $Self->{CacheInternalObject}->Set( Key => $CacheKey, Value => \%Data );
+        $Self->{CacheInternalObject}->Set(
+            Key   => $CacheKey,
+            Value => \%Data
+        );
         return %Data;
     }
     if ( $Param{Result} eq 'Name' ) {
@@ -1217,7 +1228,10 @@ sub CustomerUserServiceMemberList {
     else {
         @Data = keys %Data;
     }
-    $Self->{CacheInternalObject}->Set( Key => $CacheKey, Value => \@Data );
+    $Self->{CacheInternalObject}->Set(
+        Key   => $CacheKey,
+        Value => \@Data
+    );
     return @Data;
 }
 
@@ -1252,7 +1266,7 @@ sub CustomerUserServiceMemberAdd {
 
     # delete existing relation
     return if !$Self->{DBObject}->Do(
-        SQL => 'DELETE FROM service_customer_user WHERE customer_user_login = ? AND service_id = ?',
+        SQL  => 'DELETE FROM service_customer_user WHERE customer_user_login = ? AND service_id = ?',
         Bind => [ \$Param{CustomerUserLogin}, \$Param{ServiceID} ],
     );
 
@@ -1389,7 +1403,10 @@ sub ServiceParentsGet {
     my @Data = reverse @ServiceParents;
 
     # set cache
-    $Self->{CacheInternalObject}->Set( Key => $CacheKey, Value => \@Data );
+    $Self->{CacheInternalObject}->Set(
+        Key   => $CacheKey,
+        Value => \@Data
+    );
 
     return \@Data;
 }

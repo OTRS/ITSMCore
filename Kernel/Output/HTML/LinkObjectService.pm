@@ -311,7 +311,10 @@ sub TableCreateSimple {
 
     # check needed stuff
     if ( !$Param{ObjectLinkListWithData} || ref $Param{ObjectLinkListWithData} ne 'HASH' ) {
-        $Self->{LogObject}->Log( Priority => 'error', Message => 'Need ObjectLinkListWithData!' );
+        $Self->{LogObject}->Log(
+            Priority => 'error',
+            Message  => 'Need ObjectLinkListWithData!'
+        );
         return;
     }
 
@@ -339,10 +342,10 @@ sub TableCreateSimple {
 
                 # define item data
                 my %Item = (
-                    Type    => 'Link',
-                    Content => "S:$Service->{NameShort}",
-                    Title   => "Service: $Service->{Name}",
-                    Link => '$Env{"Baselink"}Action=AgentITSMServiceZoom;ServiceID=' . $ServiceID,
+                    Type      => 'Link',
+                    Content   => "S:$Service->{NameShort}",
+                    Title     => "Service: $Service->{Name}",
+                    Link      => '$Env{"Baselink"}Action=AgentITSMServiceZoom;ServiceID=' . $ServiceID,
                     MaxLength => 20,
                 );
 
@@ -372,7 +375,10 @@ sub ContentStringCreate {
 
     # check needed stuff
     if ( !$Param{ContentData} ) {
-        $Self->{LogObject}->Log( Priority => 'error', Message => 'Need ContentData!' );
+        $Self->{LogObject}->Log(
+            Priority => 'error',
+            Message  => 'Need ContentData!'
+        );
         return;
     }
 
@@ -400,7 +406,7 @@ sub ContentStringCreate {
 
         Data => {
             CurInciSignal => $CurInciSignal,
-            CurInciState => $Content->{Content} || '',
+            CurInciState  => $Content->{Content} || '',
         },
     );
 
@@ -493,7 +499,7 @@ sub SearchOptionList {
         $Self->{LayoutObject}->Block(
             Name => 'InputText',
             Data => {
-                Key => $Row->{FormKey},
+                Key   => $Row->{FormKey},
                 Value => $Row->{FormData} || '',
             },
         );

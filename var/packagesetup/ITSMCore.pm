@@ -760,8 +760,7 @@ sub _CIPDefaultMatrixSet {
         next DYNAMICFIELD if !IsHashRefWithData($DynamicFieldConfig);
 
         # get PossibleValues
-        $PossibleValues{ $DynamicFieldConfig->{Name} }
-            = $DynamicFieldConfig->{Config}->{PossibleValues} || {};
+        $PossibleValues{ $DynamicFieldConfig->{Name} } = $DynamicFieldConfig->{Config}->{PossibleValues} || {};
     }
 
     # get the criticality list
@@ -1018,8 +1017,7 @@ sub _FillupEmptyServiceCriticality {
         next DYNAMICFIELD if !IsHashRefWithData($DynamicFieldConfig);
 
         # get PossibleValues
-        $PossibleValues{ $DynamicFieldConfig->{Name} }
-            = $DynamicFieldConfig->{Config}->{PossibleValues} || {};
+        $PossibleValues{ $DynamicFieldConfig->{Name} } = $DynamicFieldConfig->{Config}->{PossibleValues} || {};
     }
 
     # get the criticality list

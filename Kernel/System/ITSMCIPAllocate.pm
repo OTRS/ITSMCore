@@ -236,7 +236,7 @@ sub PriorityAllocationGet {
     $Self->{DBObject}->Prepare(
         SQL => 'SELECT priority_id FROM cip_allocate '
             . 'WHERE criticality = ? AND impact = ?',
-        Bind => [ \$Param{Criticality}, \$Param{Impact} ],
+        Bind  => [ \$Param{Criticality}, \$Param{Impact} ],
         Limit => 1,
     );
 
