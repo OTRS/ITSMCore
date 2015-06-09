@@ -95,7 +95,7 @@ sub Run {
         $Page{HeadlineLeft}  = $Service{NameShort};
         $Page{HeadlineRight} = $LayoutObject->{LanguageObject}->Translate('printed by') . ' '
             . $Self->{UserFullname} . ' '
-            . $LayoutObject->Output( Template => '$Env{"Time"}' );
+            . $LayoutObject->{Time};
         $Page{FooterLeft} = '';
         $Page{PageText}   = $LayoutObject->{LanguageObject}->Translate('Page');
         $Page{PageCount}  = 1;
