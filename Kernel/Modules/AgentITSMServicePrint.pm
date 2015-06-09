@@ -91,13 +91,13 @@ sub Run {
         $Page{MarginRight}   = 40;
         $Page{MarginBottom}  = 40;
         $Page{MarginLeft}    = 40;
-        $Page{HeaderRight}   = $LayoutObject->{LanguageObject}->Get('Service');
+        $Page{HeaderRight}   = $LayoutObject->{LanguageObject}->Translate('Service');
         $Page{HeadlineLeft}  = $Service{NameShort};
-        $Page{HeadlineRight} = $LayoutObject->{LanguageObject}->Get('printed by') . ' '
+        $Page{HeadlineRight} = $LayoutObject->{LanguageObject}->Translate('printed by') . ' '
             . $Self->{UserFullname} . ' '
             . $LayoutObject->Output( Template => '$Env{"Time"}' );
         $Page{FooterLeft} = '';
-        $Page{PageText}   = $LayoutObject->{LanguageObject}->Get('Page');
+        $Page{PageText}   = $LayoutObject->{LanguageObject}->Translate('Page');
         $Page{PageCount}  = 1;
 
         # create new pdf document
@@ -211,11 +211,11 @@ sub _PDFOutputGeneralInfos {
     # create left table
     my $TableLeft = [
         {
-            Key   => $LayoutObject->{LanguageObject}->Get('Service') . ':',
+            Key   => $LayoutObject->{LanguageObject}->Translate('Service') . ':',
             Value => $Param{Service}->{NameShort},
         },
         {
-            Key   => $LayoutObject->{LanguageObject}->Get('Current Incident State') . ':',
+            Key   => $LayoutObject->{LanguageObject}->Translate('Current Incident State') . ':',
             Value => $Param{Service}->{CurInciState},
         },
     ];
@@ -223,25 +223,25 @@ sub _PDFOutputGeneralInfos {
     # create right table
     my $TableRight = [
         {
-            Key   => $LayoutObject->{LanguageObject}->Get('Created') . ':',
+            Key   => $LayoutObject->{LanguageObject}->Translate('Created') . ':',
             Value => $LayoutObject->Output(
                 Template => '[% Data.CreateTime | Localize("TimeLong") %]',
                 Data     => \%{ $Param{Service} },
             ),
         },
         {
-            Key   => $LayoutObject->{LanguageObject}->Get('Created by') . ':',
+            Key   => $LayoutObject->{LanguageObject}->Translate('Created by') . ':',
             Value => $Param{Service}->{CreateByName},
         },
         {
-            Key   => $LayoutObject->{LanguageObject}->Get('Last changed') . ':',
+            Key   => $LayoutObject->{LanguageObject}->Translate('Last changed') . ':',
             Value => $LayoutObject->Output(
                 Template => '[% Data.ChangeTime | Localize("TimeLong") %]',
                 Data     => \%{ $Param{Service} },
             ),
         },
         {
-            Key   => $LayoutObject->{LanguageObject}->Get('Last changed by') . ':',
+            Key   => $LayoutObject->{LanguageObject}->Translate('Last changed by') . ':',
             Value => $Param{Service}->{CreateByName},
         },
     ];
@@ -328,7 +328,7 @@ sub _PDFOutputDetailedInfos {
 
     # output headline
     $PDFObject->Text(
-        Text     => $LayoutObject->{LanguageObject}->Get('Service'),
+        Text     => $LayoutObject->{LanguageObject}->Translate('Service'),
         Height   => 7,
         Type     => 'Cut',
         Font     => 'ProportionalBoldItalic',
@@ -345,16 +345,16 @@ sub _PDFOutputDetailedInfos {
     # create table
     my $Table = [
         {
-            Key   => $LayoutObject->{LanguageObject}->Get('Service') . ':',
+            Key   => $LayoutObject->{LanguageObject}->Translate('Service') . ':',
             Value => $Param{Service}->{Name},
         },
         {
-            Key   => $LayoutObject->{LanguageObject}->Get('Type') . ':',
-            Value => $LayoutObject->{LanguageObject}->Get( $Param{Service}->{Type} ),
+            Key   => $LayoutObject->{LanguageObject}->Translate('Type') . ':',
+            Value => $LayoutObject->{LanguageObject}->Translate( $Param{Service}->{Type} ),
         },
         {
-            Key   => $LayoutObject->{LanguageObject}->Get('Criticality') . ':',
-            Value => $LayoutObject->{LanguageObject}->Get( $Param{Service}->{Criticality} ),
+            Key   => $LayoutObject->{LanguageObject}->Translate('Criticality') . ':',
+            Value => $LayoutObject->{LanguageObject}->Translate( $Param{Service}->{Criticality} ),
         },
     ];
     my %TableParam;
@@ -417,7 +417,7 @@ sub _PDFOutputAssociatedSLAs {
 
     # generate table data
     for my $SLAID ( sort keys %{ $Param{SLAList} } ) {
-        $TableParam{CellData}[$Row][0]{Content} = $LayoutObject->{LanguageObject}->Get('SLA') . ':';
+        $TableParam{CellData}[$Row][0]{Content} = $LayoutObject->{LanguageObject}->Translate('SLA') . ':';
         $TableParam{CellData}[$Row][0]{Font}    = 'ProportionalBold';
         $TableParam{CellData}[$Row][1]{Content} = $Param{SLAList}->{$SLAID};
         $Row++;
@@ -436,7 +436,7 @@ sub _PDFOutputAssociatedSLAs {
 
     # output headline
     $PDFObject->Text(
-        Text     => $LayoutObject->{LanguageObject}->Get('Associated SLAs'),
+        Text     => $LayoutObject->{LanguageObject}->Translate('Associated SLAs'),
         Height   => 7,
         Type     => 'Cut',
         Font     => 'ProportionalBoldItalic',
