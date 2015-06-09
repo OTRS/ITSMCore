@@ -11,11 +11,10 @@ package Kernel::Output::HTML::LinkObjectService;
 use strict;
 use warnings;
 
-use Kernel::Output::HTML::Layout;
-
 our @ObjectDependencies = (
     'Kernel::System::Log',
     'Kernel::System::Web::Request',
+    'Kernel::Output::HTML::Layout',
 );
 
 =head1 NAME
@@ -55,7 +54,12 @@ sub new {
 
     # We need our own LayoutObject instance to avoid blockdata collisions
     #   with the main page.
-    $Self->{LayoutObject} = Kernel::Output::HTML::Layout->new( %{$Self} );
+    $Kernel::OM->ObjectParamAdd(
+        'Kernel::Output::HTML::Layout'->{
+            %{$Self}
+            }
+    );
+    $Self->{LayoutObject} = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
 
     # define needed variables
     $Self->{ObjectData} = {
