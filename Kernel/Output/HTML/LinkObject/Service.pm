@@ -6,20 +6,21 @@
 # did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 # --
 
-package Kernel::Output::HTML::LinkObjectService;
+package Kernel::Output::HTML::LinkObject::Service;
 
 use strict;
 use warnings;
 
+use Kernel::Output::HTML::Layout;
+
 our @ObjectDependencies = (
     'Kernel::System::Log',
     'Kernel::System::Web::Request',
-    'Kernel::Output::HTML::Layout',
 );
 
 =head1 NAME
 
-Kernel::Output::HTML::LinkObjectService - layout backend module
+Kernel::Output::HTML::LinkObject::Service - layout backend module
 
 =head1 SYNOPSIS
 
@@ -33,7 +34,7 @@ All layout functions of link object (service)
 
 create an object
 
-    $BackendObject = Kernel::Output::HTML::LinkObjectService->new(
+    $BackendObject = Kernel::Output::HTML::LinkObject::Service->new(
         UserLanguage => 'en',
         UserID       => 1,
     );
@@ -52,14 +53,9 @@ sub new {
         $Self->{$Needed} = $Param{$Needed} || die "Got no $Needed!";
     }
 
-    # We need our own LayoutObject instance to avoid blockdata collisions
-    #   with the main page.
-    $Kernel::OM->ObjectParamAdd(
-        'Kernel::Output::HTML::Layout'->{
-            %{$Self}
-            }
-    );
-    $Self->{LayoutObject} = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
+    # we need our own LayoutObject instance to avoid blockdata collisions
+    # with the main page.
+    $Self->{LayoutObject} = Kernel::Output::HTML::Layout->new( %{$Self});
 
     # define needed variables
     $Self->{ObjectData} = {
