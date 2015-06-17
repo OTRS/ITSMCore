@@ -2,7 +2,7 @@
 # Ticket.t - ticket module testscript
 # Copyright (C) 2001-2015 OTRS AG, http://otrs.com/
 # --
-# $origin: https://github.com/OTRS/otrs/blob/7de340897951e5ada5ea344ca3401525b1494412/scripts/test/Ticket.t
+# $origin: https://github.com/OTRS/otrs/blob/35598a003aec031dbff8f899f94e16fee62caba0/scripts/test/Ticket.t
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
