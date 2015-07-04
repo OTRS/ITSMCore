@@ -2,7 +2,7 @@
 # TicketSearch.t - GenericInterface transport interface tests for TicketConnector backend
 # Copyright (C) 2001-2015 OTRS AG, http://otrs.com/
 # --
-# $origin: https://github.com/OTRS/otrs/blob/35598a003aec031dbff8f899f94e16fee62caba0/scripts/test/GenericInterface/Operation/Ticket/TicketSearch.t
+# $origin: https://github.com/OTRS/otrs/blob/ff2055e6074278681938fd77707093b0dd489031/scripts/test/GenericInterface/Operation/Ticket/TicketSearch.t
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -909,8 +909,8 @@ my @Tests = (
                 $TicketNumber1,
                 $TicketNumber2,
             ],
-            SortBy     => 'Ticket', # force order, because the Age (default) can be the same
-            OrderBy    => 'Down',
+            SortBy  => 'Ticket',    # force order, because the Age (default) can be the same
+            OrderBy => 'Down',
         },
         ExpectedReturnLocalData => {
             Data => {
@@ -954,8 +954,8 @@ my @Tests = (
                 'Ticket One Title ' . $RandomID,
                 'Ticket Two Title ' . $RandomID,
             ],
-            SortBy     => 'Ticket',              # force order, because the Age (default) can be the same
-            OrderBy    => 'Down',
+            SortBy  => 'Ticket',    # force order, because the Age (default) can be the same
+            OrderBy => 'Down',
         },
         ExpectedReturnLocalData => {
             Data => {
@@ -1164,10 +1164,10 @@ my @Tests = (
         Name           => "Test " . $TestCounter++,
         SuccessRequest => 1,
         RequestData    => {
-            States => ['new'],
-            Title  => '*' . $RandomID,
-            SortBy     => 'Ticket',    # force order, because the Age (default) can be the same
-            OrderBy    => 'Down',
+            States  => ['new'],
+            Title   => '*' . $RandomID,
+            SortBy  => 'Ticket',          # force order, because the Age (default) can be the same
+            OrderBy => 'Down',
         },
         ExpectedReturnLocalData => {
             Data => {
