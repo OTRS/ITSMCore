@@ -2,7 +2,7 @@
 # TicketACL.t - Ticket Access Control Lists tests
 # Copyright (C) 2001-2015 OTRS AG, http://otrs.com/
 # --
-# $origin: https://github.com/OTRS/otrs/blob/1b261ad06f8de4190510f28b8a260bd6266705cc/scripts/test/Ticket/TicketACL.t
+# $origin: https://github.com/OTRS/otrs/blob/4620110f5b36688dbae9c373a76a156a61d7a1d7/scripts/test/Ticket/TicketACL.t
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
