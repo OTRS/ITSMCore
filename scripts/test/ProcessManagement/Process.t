@@ -2,7 +2,7 @@
 # Process.t - Process module testscript
 # Copyright (C) 2001-2016 OTRS AG, http://otrs.com/
 # --
-# $origin: https://github.com/OTRS/otrs/blob/63028c8505ca2c8b783d6a9cb4a8889ed40af48e/scripts/test/ProcessManagement/Process.t
+# $origin: https://github.com/OTRS/otrs/blob/be07fec70df5989ca43ad33dc0438fb5df8ca969/scripts/test/ProcessManagement/Process.t
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -134,14 +134,14 @@ my $SLAID = $Kernel::OM->Get('Kernel::System::SLA')->SLAAdd(
 );
 
 my $TicketID = $CommonObject{TicketObject}->TicketCreate(
-    Title    => 'Process Unittest Testticket',
-    Queue    => $QueueData3{Name},               # or QueueID => 123,
-    Lock     => 'unlock',
-    Priority => '3 normal',                      # or PriorityID => 2,
-    State    => 'new',                           # or StateID => 5,
-    OwnerID  => 1,
+    Title        => 'Process Unittest Testticket',
+    Queue        => $QueueData3{Name},               # or QueueID => 123,
+    Lock         => 'unlock',
+    Priority     => '3 normal',                      # or PriorityID => 2,
+    State        => 'new',                           # or StateID => 5,
+    OwnerID      => 1,
     CustomerUser => $TestCustomerUserLogin,
-    UserID   => 1,
+    UserID       => 1,
 );
 $Self->True(
     $TicketID || 0,
