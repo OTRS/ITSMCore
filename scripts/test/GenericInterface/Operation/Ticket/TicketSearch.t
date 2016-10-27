@@ -1,7 +1,7 @@
 # --
 # Copyright (C) 2001-2016 OTRS AG, http://otrs.com/
 # --
-# $origin: https://github.com/OTRS/otrs/blob/be07fec70df5989ca43ad33dc0438fb5df8ca969/scripts/test/GenericInterface/Operation/Ticket/TicketSearch.t
+# $origin: https://github.com/OTRS/otrs/blob/ec0d79d1961308387ad27398528763b5db1142ca/scripts/test/GenericInterface/Operation/Ticket/TicketSearch.t
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -1414,6 +1414,29 @@ my @Tests = (
         ExpectedReturnRemoteData => {
             Data => {
                 TicketID => $TicketID1,
+            },
+            Success => 1,
+        },
+        Operation => 'TicketSearch',
+    },
+
+    {
+        Name           => "Test ContentSearch Parameter" . $TestCounter++,
+        SuccessRequest => 1,
+        RequestData    => {
+            Body          => 'not too long',
+            Subject       => 'not too long',
+            ContentSearch => 'OR',
+        },
+        ExpectedReturnLocalData => {
+            Data => {
+                TicketID => [$TicketID4],
+            },
+            Success => 1
+        },
+        ExpectedReturnRemoteData => {
+            Data => {
+                TicketID => $TicketID4,
             },
             Success => 1,
         },
