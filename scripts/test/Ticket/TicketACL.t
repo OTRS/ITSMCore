@@ -1,7 +1,7 @@
 # --
 # Copyright (C) 2001-2016 OTRS AG, http://otrs.com/
 # --
-# $origin: https://github.com/OTRS/otrs/blob/2656bdbb6fccb310c24275e0ee53c2bf31b4e030/scripts/test/Ticket/TicketACL.t
+# $origin: otrs - 2656bdbb6fccb310c24275e0ee53c2bf31b4e030 - scripts/test/Ticket/TicketACL.t
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
