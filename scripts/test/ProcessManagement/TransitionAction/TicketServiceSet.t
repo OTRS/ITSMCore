@@ -1,7 +1,7 @@
 # --
 # Copyright (C) 2001-2016 OTRS AG, http://otrs.com/
 # --
-# $origin: https://github.com/OTRS/otrs/blob/ec0d79d1961308387ad27398528763b5db1142ca/scripts/test/ProcessManagement/TransitionAction/TicketServiceSet.t
+# $origin: otrs - ec0d79d1961308387ad27398528763b5db1142ca - scripts/test/ProcessManagement/TransitionAction/TicketServiceSet.t
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -38,9 +38,9 @@ my $TestUserID    = $UserObject->UserLookup(
     UserLogin => $TestUserLogin,
 );
 
-# ----------------------------------------
+#
 # Create new services
-# ----------------------------------------
+#
 my @Services = (
     {
         Name    => 'Service0' . $RandomID,
@@ -91,11 +91,11 @@ for my $ServiceData (@Services) {
     $ServiceData->{ServiceID} = $ServiceID;
 }
 
-# ----------------------------------------
+#
 
-# ----------------------------------------
+#
 # Assign services to customer (0 and 1)
-# ----------------------------------------
+#
 my $Success = $ServiceObject->CustomerUserServiceMemberAdd(
     CustomerUserLogin => $TestCustomerUserLogin,
     ServiceID         => $Services[0]->{ServiceID},
@@ -124,11 +124,11 @@ $Self->True(
         . " with true",
 );
 
-# ----------------------------------------
+#
 
-# ----------------------------------------
+#
 # Create a test tickets
-# ----------------------------------------
+#
 my $TicketID1 = $TicketObject->TicketCreate(
     TN            => undef,
     Title         => $Services[0]->{ServiceID},
@@ -195,7 +195,7 @@ $Self->True(
     "TicketGet() - Get Ticket with ID $TicketID2.",
 );
 
-# ----------------------------------------
+#
 
 # Run() tests
 my @Tests = (
@@ -490,9 +490,9 @@ for my $Test (@Tests) {
     }
 }
 
-#-----------------------------------------
+#
 # Destructors to remove our Testitems
-# ----------------------------------------
+#
 
 # Tickets
 my $Delete = $TicketObject->TicketDelete(
@@ -527,6 +527,6 @@ for my $ServiceData (@Services) {
     );
 }
 
-# ----------------------------------------
+#
 
 1;
