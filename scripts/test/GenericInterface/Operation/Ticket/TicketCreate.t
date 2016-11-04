@@ -1,7 +1,7 @@
 # --
 # Copyright (C) 2001-2016 OTRS AG, http://otrs.com/
 # --
-# $origin: otrs - ec0d79d1961308387ad27398528763b5db1142ca - scripts/test/GenericInterface/Operation/Ticket/TicketCreate.t
+# $origin: otrs - 227c23f7deaddd7300369a7c88915b7b8a4d0d55 - scripts/test/GenericInterface/Operation/Ticket/TicketCreate.t
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -89,12 +89,22 @@ $ConfigObject->Set(
 );
 
 # disable SessionCheckRemoteIP setting
+$SysConfigObject->ConfigItemUpdate(
+    Valid => 1,
+    Key   => 'SessionCheckRemoteIP',
+    Value => '0',
+);
 $ConfigObject->Set(
     Key   => 'SessionCheckRemoteIP',
     Value => 0,
 );
 
 # enable customer groups support
+$SysConfigObject->ConfigItemUpdate(
+    Valid => 1,
+    Key   => 'CustomerGroupSupport',
+    Value => '1',
+);
 $ConfigObject->Set(
     Key   => 'CustomerGroupSupport',
     Value => 1,
