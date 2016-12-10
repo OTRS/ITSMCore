@@ -16,7 +16,7 @@ use warnings;
 use Kernel::System::Service;
 use Kernel::System::Valid;
 # ---
-# ITSM
+# ITSMCore
 # ---
 use Kernel::System::DynamicField;
 use Kernel::System::GeneralCatalog;
@@ -39,7 +39,7 @@ sub new {
     $Self->{ServiceObject} = Kernel::System::Service->new(%Param);
     $Self->{ValidObject}   = Kernel::System::Valid->new(%Param);
 # ---
-# ITSM
+# ITSMCore
 # ---
     $Self->{DynamicFieldObject}   = Kernel::System::DynamicField->new(%Param);
     $Self->{GeneralCatalogObject} = Kernel::System::GeneralCatalog->new(%Param);
@@ -102,7 +102,7 @@ sub Run {
         # get params
         my %GetParam;
 # ---
-# ITSM
+# ITSMCore
 # ---
 #        for (qw(ServiceID ParentID Name ValidID Comment)) {
         for (qw(ServiceID ParentID Name ValidID Comment TypeID Criticality)) {
@@ -338,7 +338,7 @@ sub _MaskNew {
         Translation    => 0,
     );
 # ---
-# ITSM
+# ITSMCore
 # ---
     # generate TypeOptionStrg
     my $TypeList = $Self->{GeneralCatalogObject}->ItemList(

@@ -33,7 +33,7 @@ use Getopt::Std;
 
 use Kernel::System::ObjectManager;
 # ---
-# ITSM
+# ITSMCore
 # ---
 use Kernel::System::VariableCheck qw(:all);
 # ---
@@ -52,7 +52,7 @@ my $NoOptions = $ARGV[0] ? 0 : 1;
 # get options
 my %Opts;
 # ---
-# ITSM
+# ITSMCore
 # ---
 #getopts( 'hn:p:c:', \%Opts );
 getopts( 'hn:p:c:C:t:', \%Opts );
@@ -60,7 +60,7 @@ getopts( 'hn:p:c:C:t:', \%Opts );
 
 if ( $Opts{h} || $NoOptions ) {
 # ---
-# ITSM
+# ITSMCore
 # ---
 #    print STDERR "Usage: $FindBin::Script -n <Name> -p <Parent> -c <Comment>\n";
     print STDERR "Usage: $FindBin::Script -n <Name> -p <Parent> -c <Comment> -C <Criticality> -t <Type>\n\n";
@@ -101,7 +101,7 @@ if ( $Reverse{$ServiceName} ) {
     exit 1;
 }
 # ---
-# ITSM
+# ITSMCore
 # ---
 
 # get the dynamic field config for ITSMCriticality

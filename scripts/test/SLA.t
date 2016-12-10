@@ -76,7 +76,7 @@ for my $Counter ( 1 .. 3 ) {
         ValidID => 1,
         UserID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
         TypeID      => 1,
         Criticality => '3 normal',
@@ -104,7 +104,7 @@ my $ItemData = [
             ValidID => 1,
             UserID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -117,7 +117,7 @@ my $ItemData = [
             Name   => $SLAName[0],
             UserID => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -130,14 +130,14 @@ my $ItemData = [
             Name    => $SLAName[0],
             ValidID => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
         },
     },
 # ---
-# ITSM
+# ITSMCore
 # ---
     # this sla is NOT complete and must not be added
     {
@@ -157,7 +157,7 @@ my $ItemData = [
             ValidID    => 1,
             UserID     => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -172,7 +172,7 @@ my $ItemData = [
             ValidID    => 1,
             UserID     => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -187,7 +187,7 @@ my $ItemData = [
             ValidID    => 1,
             UserID     => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -201,7 +201,7 @@ my $ItemData = [
             ValidID => 1,
             UserID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -221,7 +221,7 @@ my $ItemData = [
             CreateBy            => 1,
             ChangeBy            => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID              => 1,
 # ---
@@ -235,7 +235,7 @@ my $ItemData = [
             ValidID => 1,
             UserID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -248,7 +248,7 @@ my $ItemData = [
             ValidID => 1,
             UserID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -261,7 +261,7 @@ my $ItemData = [
             Name   => $SLAName[0] . 'UPDATE1',
             UserID => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -274,7 +274,7 @@ my $ItemData = [
             Name    => $SLAName[0] . 'UPDATE1',
             ValidID => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -289,7 +289,7 @@ my $ItemData = [
             ValidID    => 1,
             UserID     => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -304,7 +304,7 @@ my $ItemData = [
             ValidID    => 1,
             UserID     => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -319,7 +319,7 @@ my $ItemData = [
             ValidID    => 1,
             UserID     => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -334,7 +334,7 @@ my $ItemData = [
             ValidID    => 1,
             UserID     => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 2,
 # ---
@@ -354,7 +354,7 @@ my $ItemData = [
             CreateBy            => 1,
             ChangeBy            => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 2,
 # ---
@@ -369,7 +369,7 @@ my $ItemData = [
             ValidID    => 1,
             UserID     => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 2,
 # ---
@@ -389,7 +389,7 @@ my $ItemData = [
             CreateBy            => 1,
             ChangeBy            => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 2,
 # ---
@@ -403,7 +403,7 @@ my $ItemData = [
             ValidID => 1,
             UserID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -426,7 +426,7 @@ my $ItemData = [
             Comment             => 'TestComment2',
             UserID              => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -446,7 +446,7 @@ my $ItemData = [
             CreateBy            => 1,
             ChangeBy            => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -459,7 +459,7 @@ my $ItemData = [
             ValidID => 1,
             UserID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -472,7 +472,7 @@ my $ItemData = [
             Name   => $SLAName[3] . 'UPDATE1',
             UserID => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -485,7 +485,7 @@ my $ItemData = [
             Name    => $SLAName[3] . 'UPDATE1',
             ValidID => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -508,7 +508,7 @@ my $ItemData = [
             Comment             => 'TestComment2UPDATE2',
             UserID              => $UserIDs[0],
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 2,
 # ---
@@ -528,7 +528,7 @@ my $ItemData = [
             CreateBy            => 1,
             ChangeBy            => $UserIDs[0],
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 2,
 # ---
@@ -551,7 +551,7 @@ my $ItemData = [
             Comment             => 'TestComment2UPDATE3',
             UserID              => $UserIDs[1],
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -571,7 +571,7 @@ my $ItemData = [
             CreateBy            => 1,
             ChangeBy            => $UserIDs[1],
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -587,7 +587,7 @@ my $ItemData = [
             Comment    => " \t \n \r Test Comment \t \n \r ",
             UserID     => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 2,
 # ---
@@ -607,7 +607,7 @@ my $ItemData = [
             CreateBy            => 1,
             ChangeBy            => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 2,
 # ---
@@ -623,7 +623,7 @@ my $ItemData = [
             Comment    => " \t \n \r Test Comment UPDATE1 \t \n \r ",
             UserID     => $UserIDs[1],
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -643,7 +643,7 @@ my $ItemData = [
             CreateBy            => 1,
             ChangeBy            => $UserIDs[1],
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -658,7 +658,7 @@ my $ItemData = [
             Comment => ' Ѡ Ѥ TestComment5 Ϡ Ω ',
             UserID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 3,
 # ---
@@ -678,7 +678,7 @@ my $ItemData = [
             CreateBy            => 1,
             ChangeBy            => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 3,
 # ---
@@ -693,7 +693,7 @@ my $ItemData = [
             Comment => ' Ѡ Ѥ TestComment5 Ϡ Ω UPDATE1',
             UserID  => $UserIDs[0],
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -713,7 +713,7 @@ my $ItemData = [
             CreateBy            => 1,
             ChangeBy            => $UserIDs[0],
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -729,7 +729,7 @@ my $ItemData = [
             Comment    => ' [test]%*\\ Test Comment [test]%*\\ ',
             UserID     => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -749,7 +749,7 @@ my $ItemData = [
             CreateBy            => 1,
             ChangeBy            => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 1,
 # ---
@@ -765,7 +765,7 @@ my $ItemData = [
             Comment    => ' [test]%*\\ Test Comment UPDATE1 [test]%*\\ ',
             UserID     => $UserIDs[1],
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 2,
 # ---
@@ -785,7 +785,7 @@ my $ItemData = [
             CreateBy            => 1,
             ChangeBy            => $UserIDs[1],
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID => 2,
 # ---

@@ -51,7 +51,7 @@ my $ServiceID1   = $ServiceObject->ServiceAdd(
     ValidID => 1,
     UserID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
     TypeID      => 1,
     Criticality => '3 normal',
@@ -71,7 +71,7 @@ my $ServiceID2   = $ServiceObject->ServiceAdd(
     ValidID => 1,
     UserID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
     TypeID      => 1,
     Criticality => '3 normal',
@@ -474,7 +474,7 @@ my $ServiceUpdate1 = $ServiceObject->ServiceUpdate(
     ValidID   => 2,
     UserID    => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
     TypeID      => 1,
     Criticality => '3 normal',
@@ -493,7 +493,7 @@ my $ServiceUpdate2 = $ServiceObject->ServiceUpdate(
     ValidID   => 2,
     UserID    => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
     TypeID      => 1,
     Criticality => '3 normal',

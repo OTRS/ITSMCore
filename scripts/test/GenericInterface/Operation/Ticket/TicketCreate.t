@@ -247,7 +247,7 @@ my $ServiceObject = $Kernel::OM->Get('Kernel::System::Service');
 my $ServiceID = $ServiceObject->ServiceAdd(
     Name    => 'TestService' . $RandomID,
 # ---
-# ITSM
+# ITSMCore
 # ---
     TypeID      => 1,
     Criticality => '3 normal',
@@ -289,7 +289,7 @@ my $SLAID = $SLAObject->SLAAdd(
     Name       => 'TestSLA' . $RandomID,
     ServiceIDs => [$ServiceID],
 # ---
-# ITSM
+# ITSMCore
 # ---
     TypeID      => 1,
 # ---

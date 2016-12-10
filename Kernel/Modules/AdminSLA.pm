@@ -17,7 +17,7 @@ use Kernel::System::Service;
 use Kernel::System::SLA;
 use Kernel::System::Valid;
 # ---
-# ITSM
+# ITSMCore
 # ---
 use Kernel::System::GeneralCatalog;
 # ---
@@ -39,7 +39,7 @@ sub new {
     $Self->{SLAObject}     = Kernel::System::SLA->new(%Param);
     $Self->{ValidObject}   = Kernel::System::Valid->new(%Param);
 # ---
-# ITSM
+# ITSMCore
 # ---
     $Self->{GeneralCatalogObject} = Kernel::System::GeneralCatalog->new(%Param);
 # ---
@@ -82,7 +82,7 @@ sub Run {
         my %GetParam;
         for my $Param (
 # ---
-# ITSM
+# ITSMCore
 # ---
 #            qw(SLAID Name Calendar FirstResponseTime FirstResponseNotify SolutionTime SolutionNotify UpdateTime UpdateNotify ValidID Comment)
             qw(SLAID Name Calendar FirstResponseTime FirstResponseNotify SolutionTime SolutionNotify UpdateTime UpdateNotify ValidID Comment TypeID MinTimeBetweenIncidents)
@@ -371,7 +371,7 @@ sub _MaskNew {
         Max         => 200,
     );
 # ---
-# ITSM
+# ITSMCore
 # ---
         # generate TypeOptionStrg
         my $TypeList = $Self->{GeneralCatalogObject}->ItemList(

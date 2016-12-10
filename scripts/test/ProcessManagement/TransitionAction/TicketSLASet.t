@@ -46,7 +46,7 @@ my @Services = (
     {
         Name    => 'Service0' . $RandomID,
 # ---
-# ITSM
+# ITSMCore
 # ---
         TypeID      => 1,
         Criticality => '3 normal',
@@ -78,7 +78,7 @@ my @SLAs = (
         Name       => 'SLA0' . $RandomID,
         ServiceIDs => [ $Services[0]->{ServiceID} ],
 # ---
-# ITSM
+# ITSMCore
 # ---
         TypeID => 1,
 # ---
@@ -89,7 +89,7 @@ my @SLAs = (
         Name       => 'SLA1' . $RandomID,
         ServiceIDs => [ $Services[0]->{ServiceID} ],
 # ---
-# ITSM
+# ITSMCore
 # ---
         TypeID => 1,
 # ---
@@ -100,7 +100,7 @@ my @SLAs = (
         Name       => 'SLA2' . $RandomID,
         ServiceIDs => [],
 # ---
-# ITSM
+# ITSMCore
 # ---
         TypeID => 1,
 # ---

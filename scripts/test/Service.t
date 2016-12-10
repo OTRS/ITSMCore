@@ -103,7 +103,7 @@ my $ItemData = [
         },
     },
 # ---
-# ITSM
+# ITSMCore
 # ---
 
     # this service is NOT complete and must not be added
@@ -134,7 +134,7 @@ my $ItemData = [
             ValidID => 1,
             UserID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -149,7 +149,7 @@ my $ItemData = [
             CreateBy  => 1,
             ChangeBy  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -190,7 +190,7 @@ my $ItemData = [
         },
     },
 # ---
-# ITSM
+# ITSMCore
 # ---
 
     # the service one add-test before must be NOT updated (service is NOT complete)
@@ -222,7 +222,7 @@ my $ItemData = [
             Comment => 'TestComment2',
             UserID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 2,
             Criticality => '3 normal',
@@ -237,7 +237,7 @@ my $ItemData = [
             CreateBy  => 1,
             ChangeBy  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 2,
             Criticality => '3 normal',
@@ -277,7 +277,7 @@ my $ItemData = [
             Comment => 'TestComment2UPDATE2',
             UserID  => $UserIDs[0],
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 4,
             Criticality => '3 normal',
@@ -292,7 +292,7 @@ my $ItemData = [
             CreateBy  => 1,
             ChangeBy  => $UserIDs[0],
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 4,
             Criticality => '3 normal',,
@@ -308,7 +308,7 @@ my $ItemData = [
             Comment => 'TestComment2UPDATE3',
             UserID  => $UserIDs[1],
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -323,7 +323,7 @@ my $ItemData = [
             CreateBy  => 1,
             ChangeBy  => $UserIDs[1],
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -393,7 +393,7 @@ my $ItemData = [
             Comment => " \t \n \r Test Comment \t \n \r ",
             UserID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 2,
             Criticality => '3 normal',
@@ -408,7 +408,7 @@ my $ItemData = [
             CreateBy  => 1,
             ChangeBy  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 2,
             Criticality => '3 normal',
@@ -424,7 +424,7 @@ my $ItemData = [
             Comment => " \t \n \r Test Comment \t \n \r ",
             UserID  => $UserIDs[1],
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -439,7 +439,7 @@ my $ItemData = [
             CreateBy  => 1,
             ChangeBy  => $UserIDs[1],
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -455,7 +455,7 @@ my $ItemData = [
             Comment => ' Ѡ Ѥ TestComment5 Ϡ Ω ',
             UserID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -470,7 +470,7 @@ my $ItemData = [
             CreateBy  => 1,
             ChangeBy  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -486,7 +486,7 @@ my $ItemData = [
             Comment => ' Ѡ Ѥ TestComment5 Ϡ Ω UPDATE1',
             UserID  => $UserIDs[0],
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -501,7 +501,7 @@ my $ItemData = [
             CreateBy  => 1,
             ChangeBy  => $UserIDs[0],
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -517,7 +517,7 @@ my $ItemData = [
             Comment => ' [test]%*\\ Test Comment [test]%*\\ ',
             UserID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -532,7 +532,7 @@ my $ItemData = [
             CreateBy  => 1,
             ChangeBy  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -548,7 +548,7 @@ my $ItemData = [
             Comment => ' [test]%*\\ Test Comment UPDATE1 [test]%*\\ ',
             UserID  => $UserIDs[1],
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -563,7 +563,7 @@ my $ItemData = [
             CreateBy  => 1,
             ChangeBy  => $UserIDs[1],
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -578,7 +578,7 @@ my $ItemData = [
             ValidID => 1,
             UserID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -592,7 +592,7 @@ my $ItemData = [
             CreateBy  => 1,
             ChangeBy  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -608,7 +608,7 @@ my $ItemData = [
             ValidID  => 1,
             UserID   => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -622,7 +622,7 @@ my $ItemData = [
             CreateBy  => 1,
             ChangeBy  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -638,7 +638,7 @@ my $ItemData = [
             ValidID  => 1,
             UserID   => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -652,7 +652,7 @@ my $ItemData = [
             CreateBy  => 1,
             ChangeBy  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -678,7 +678,7 @@ my $ItemData = [
             ValidID  => 1,
             UserID   => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -692,7 +692,7 @@ my $ItemData = [
             CreateBy  => 1,
             ChangeBy  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -708,7 +708,7 @@ my $ItemData = [
             ValidID  => 1,
             UserID   => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -725,7 +725,7 @@ my $ItemData = [
             CreateBy  => 1,
             ChangeBy  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             TypeID      => 1,
             Criticality => '3 normal',
@@ -1013,7 +1013,7 @@ my $ServiceList2ServiceID = $ServiceObject->ServiceAdd(
     ValidID => 1,
     UserID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
     TypeID      => 1,
     Criticality => '3 normal',
@@ -1101,7 +1101,7 @@ for my $ServiceName (@ServiceNames) {
         ValidID => 1,
         UserID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
         TypeID      => 1,
         Criticality => '3 normal',
@@ -1187,7 +1187,7 @@ $Self->Is(
             ServiceID => $ServiceData->{ServiceID},
             UserID    => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
             IncidentState => 1,
 # ---
@@ -1209,7 +1209,7 @@ my $ServiceGrandFatherID = $ServiceObject->ServiceAdd(
     ParentID => 0,
     ValidID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
     TypeID      => 1,
     Criticality => '3 normal',
@@ -1231,7 +1231,7 @@ my $ServiceFatherID = $ServiceObject->ServiceAdd(
     ParentID => $ServiceGrandFatherID,
     ValidID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
     TypeID      => 1,
     Criticality => '3 normal',
@@ -1253,7 +1253,7 @@ my $ServiceSonID = $ServiceObject->ServiceAdd(
     ParentID => $ServiceFatherID,
     ValidID  => 1,
 # ---
-# ITSM
+# ITSMCore
 # ---
     TypeID      => 1,
     Criticality => '3 normal',
@@ -1370,7 +1370,7 @@ for my $ServiceID (@AddedParentServices) {
         ParentID  => $Service{ParentID} || 0,
         ValidID   => 2,
 # ---
-# ITSM
+# ITSMCore
 # ---
         TypeID      => $Service{TypeID},
         Criticality => $Service{Criticality},
