@@ -1,7 +1,7 @@
 # --
 # Copyright (C) 2001-2016 OTRS AG, http://otrs.com/
 # --
-# $origin: otrs - ec0d79d1961308387ad27398528763b5db1142ca - scripts/test/ProcessManagement/TransitionAction/TicketSLASet.t
+# $origin: otrs - a8ba0561824b2777a22a2a906b5f24e9e8fe66ca - scripts/test/ProcessManagement/TransitionAction/TicketSLASet.t
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -124,8 +124,6 @@ for my $SLAData (@SLAs) {
 }
 
 #
-
-#
 # Assign services to customer (0 and 1)
 #
 my $Success = $ServiceObject->CustomerUserServiceMemberAdd(
@@ -141,8 +139,6 @@ $Self->True(
     "CustomerUserServiceMemberAdd() for user $TestCustomerUserLogin, and Service $Services[0]->{Name}"
         . " with true",
 );
-
-#
 
 #
 # Create a test tickets
@@ -212,8 +208,6 @@ $Self->True(
     IsHashRefWithData( \%Ticket2 ),
     "TicketGet() - Get Ticket with ID $TicketID2.",
 );
-
-#
 
 # Run() tests
 my @Tests = (
@@ -558,7 +552,5 @@ for my $ServiceData (@Services) {
         "ServiceUpdate() for $ServiceData->{Name}, Set service to invalid with true",
     );
 }
-
-#
 
 1;
