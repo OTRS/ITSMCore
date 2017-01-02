@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # --
-# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/
+# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
 # --
 # $origin: otrs - 8a8f0ad69eef301d2737142a0209b860db92458a - bin/otrs.AddService.pl
 # --

@@ -1,5 +1,5 @@
 # --
-# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/
+# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
 # --
 # $origin: otrs - 227c23f7deaddd7300369a7c88915b7b8a4d0d55 - scripts/test/GenericInterface/Operation/Ticket/TicketCreate.t
 # --
