@@ -2,7 +2,7 @@
 # --
 # Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
 # --
-# $origin: otrs - 8a8f0ad69eef301d2737142a0209b860db92458a - bin/otrs.AddService.pl
+# $origin: otrs - dcb4bca6b4f9d5de2ece16c2022c994effb9e589 - bin/otrs.AddService.pl
 # --
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU AFFERO General Public License as published by
