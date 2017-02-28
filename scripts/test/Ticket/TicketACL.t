@@ -1,7 +1,7 @@
 # --
 # Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
 # --
-# $origin: otrs - dcb4bca6b4f9d5de2ece16c2022c994effb9e589 - scripts/test/Ticket/TicketACL.t
+# $origin: otrs - 561211cb20b822daf28e66136312c781c939617b - scripts/test/Ticket/TicketACL.t
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -4385,27 +4385,27 @@ $Self->True(
 );
 
 # clean roles
-my $Success = $GroupObject->GroupUpdate(
+my $Success = $GroupObject->RoleUpdate(
     ID      => $RoleID1,
     Name    => "unittest1-$RandomID",
-    Comment => 'comment describing the group',
+    Comment => 'comment describing the role',
     ValidID => 2,
     UserID  => 1,
 );
 $Self->True(
     $TicketDeleteSuccess,
-    "GroupUpdate ID ($RoleID1) invalidated successfully"
+    "RoleUpdate ID ($RoleID1) invalidated successfully",
 );
-$Success = $GroupObject->GroupUpdate(
+$Success = $GroupObject->RoleUpdate(
     ID      => $RoleID2,
     Name    => "unittest2-$RandomID",
-    Comment => 'comment describing the group',
+    Comment => 'comment describing the role',
     ValidID => 2,
     UserID  => 1,
 );
 $Self->True(
     $TicketDeleteSuccess,
-    "GroupUpdate ID ($RoleID2) invalidated successfully"
+    "RoleUpdate ID ($RoleID2) invalidated successfully",
 );
 
 1;
