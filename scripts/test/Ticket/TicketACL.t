@@ -1,7 +1,7 @@
 # --
 # Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
 # --
-# $origin: otrs - 561211cb20b822daf28e66136312c781c939617b - scripts/test/Ticket/TicketACL.t
+# $origin: otrs - eb6bc9fda6c1eabadcc94e223a2a7f62debb8fc2 - scripts/test/Ticket/TicketACL.t
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -326,32 +326,32 @@ my %NewStateData = $StateObject->StateGet(
     UserID => 1,
 );
 
-# set dynamic_field options
-my $DynamicFieldName = 'DynamicField' . $RandomID;
-my $DynamicFieldID   = $DynamicFieldObject->DynamicFieldAdd(
-    Name       => $DynamicFieldName,
-    Label      => 'a description',
-    FieldOrder => 99999,
-    FieldType  => 'Text',
-    ObjectType => 'Ticket',
-    Config     => {
-        DefaultValue => 'Default',
-    },
-    Reorder => 0,
-    ValidID => 1,
-    UserID  => 1,
-);
+# Create test ticket dynamic fields.
+my @DynamicFieldIDs;
+my @DynamicFieldNames;
+for my $Count ( 1 .. 2 ) {
+    my $DynamicFieldName = 'DynamicField' . $Count . $RandomID;
+    my $DynamicFieldID   = $DynamicFieldObject->DynamicFieldAdd(
+        Name       => $DynamicFieldName,
+        Label      => 'a description',
+        FieldOrder => 99999,
+        FieldType  => 'Text',
+        ObjectType => 'Ticket',
+        Config     => {
+            DefaultValue => 'Default',
+        },
+        Reorder => 0,
+        ValidID => 1,
+        UserID  => 1,
+    );
+    $Self->True(
+        $DynamicFieldID,
+        "DynamicFieldAdd() ID ($DynamicFieldID) added successfully"
+    );
 
-# sanity check
-$Self->True(
-    $DynamicFieldID,
-    "DynamicFieldAdd() ID ($DynamicFieldID) added successfully"
-);
-
-my $DynamicFieldData = $DynamicFieldObject->DynamicFieldGet(
-    ID     => $DynamicFieldID,
-    UserID => 1,
-);
+    push @DynamicFieldIDs,   $DynamicFieldID;
+    push @DynamicFieldNames, $DynamicFieldName;
+}
 
 # TODO integrate this tests with database tests
 # set testing ACLs options
@@ -500,6 +500,18 @@ my %TestACLs = (
             },
         },
     },
+    'DynamicField-2' => {
+        Properties => {
+            DynamicField => {
+                DynamicField_Field2 => ['0'],    # zero-value, see bug#12273
+            },
+        },
+        PossibleNot => {
+            Ticket => {
+                State => ['open'],
+            },
+        },
+    },
 );
 
 $ConfigObject->Set(
@@ -541,24 +553,32 @@ $Self->True(
     "TicketCreate() ID ($TicketID) created successfully",
 );
 
-# set the dynamic field value
-my $DynamicFieldValueSetSuccess = $DynamicFieldValueObject->ValueSet(
-    FieldID  => $DynamicFieldID,
-    ObjectID => $TicketID,
-    Value    => [
-        {
-            ValueText => 'Item1',
-        },
-    ],
-    UserID => $UserID,
-);
+# Set the test ticket dynamic field values.
+for my $Count ( 0 .. 1 ) {
+    my $Value;
+    if ( $Count == 0 ) {
+        $Value = 'Item1';
+    }
+    elsif ( $Count == 1 ) {
+        $Value = '0';
+    }
+    my $DynamicFieldValueSetSuccess = $Kernel::OM->Get('Kernel::System::DynamicFieldValue')->ValueSet(
+        FieldID  => $DynamicFieldIDs[$Count],
+        ObjectID => $TicketID,
+        Value    => [
+            {
+                ValueText => $Value,
+            },
+        ],
+        UserID => $UserID,
+    );
 
-# sanity check
-$Self->True(
-    $DynamicFieldValueSetSuccess,
-    "DynamicField ValueSet() for DynamicField ID ($DynamicFieldID), Ticket ID ($TicketID)"
-        . "set successfully",
-);
+    $Self->True(
+        $DynamicFieldValueSetSuccess,
+        "DynamicField ValueSet() for DynamicField ID ($DynamicFieldIDs[$Count]),"
+            . "Ticket ID ($TicketID) set successfully",
+    );
+}
 
 # define form update based tests
 my @Tests = (
@@ -1013,6 +1033,28 @@ my @Tests = (
             ReturnSubType => 'State',
             DynamicField  => {
                 DynamicField_Field1 => ['Item1']
+            },
+            UserID => $UserID,
+        },
+        SuccessMatch => 1,
+        ReturnData   => {
+            1 => 'new',
+            3 => 'closed',
+        },
+    },
+
+    {
+        Name   => 'ACL DynamicField-2 - DynamicField with zero value',
+        Config => {
+            Data => {
+                1 => 'new',
+                2 => 'open',
+                3 => 'closed',
+            },
+            ReturnType    => 'Ticket',
+            ReturnSubType => 'State',
+            DynamicField  => {
+                DynamicField_Field2 => ['0'],    # zero-value, see bug#12273
             },
             UserID => $UserID,
         },
@@ -2552,7 +2594,7 @@ $Self->True(
             'DB-DynamicField-1-A' => {
                 PropertiesDatabase => {
                     DynamicField => {
-                        'DynamicField_' . $DynamicFieldName => ['Item2'],
+                        'DynamicField_' . $DynamicFieldNames[0] => ['Item2'],
                     },
                 },
                 PossibleNot => {
@@ -2572,7 +2614,7 @@ $Self->True(
             ReturnSubType => 'State',
             TicketID      => $TicketID,
             DynamicField  => {
-                'DynamicField_' . $DynamicFieldName => ['Item2']
+                'DynamicField_' . $DynamicFieldNames[0] => ['Item2']
             },
             UserID => $UserID,
         },
@@ -2586,7 +2628,7 @@ $Self->True(
             'DB-DynamicField-1-B' => {
                 PropertiesDatabase => {
                     DynamicField => {
-                        'DynamicField_' . $DynamicFieldName => ['Item1'],
+                        'DynamicField_' . $DynamicFieldNames[0] => ['Item1'],
                     },
                 },
                 PossibleNot => {
@@ -2606,7 +2648,7 @@ $Self->True(
             ReturnSubType => 'State',
             TicketID      => $TicketID,
             DynamicField  => {
-                'DynamicField_' . $DynamicFieldName => ['Item2']
+                'DynamicField_' . $DynamicFieldNames[0] => ['Item2']
             },
             UserID => $UserID,
         },
@@ -2623,12 +2665,12 @@ $Self->True(
             'DB-DynamicField-1-C' => {
                 Properties => {
                     DynamicField => {
-                        'DynamicField_' . $DynamicFieldName => ['Item1'],
+                        'DynamicField_' . $DynamicFieldNames[0] => ['Item1'],
                     },
                 },
                 PropertiesDatabase => {
                     DynamicField => {
-                        'DynamicField_' . $DynamicFieldName => ['Item1'],
+                        'DynamicField_' . $DynamicFieldNames[0] => ['Item1'],
                     },
                 },
                 PossibleNot => {
@@ -2648,7 +2690,7 @@ $Self->True(
             ReturnSubType => 'State',
             TicketID      => $TicketID,
             DynamicField  => {
-                'DynamicField_' . $DynamicFieldName => ['Item2']
+                'DynamicField_' . $DynamicFieldNames[0] => ['Item2']
             },
             UserID => $UserID,
         },
@@ -2662,12 +2704,12 @@ $Self->True(
             'DB-DynamicField-1-C' => {
                 Properties => {
                     DynamicField => {
-                        'DynamicField_' . $DynamicFieldName => ['Item2'],
+                        'DynamicField_' . $DynamicFieldNames[0] => ['Item2'],
                     },
                 },
                 PropertiesDatabase => {
                     DynamicField => {
-                        'DynamicField_' . $DynamicFieldName => ['Item1'],
+                        'DynamicField_' . $DynamicFieldNames[0] => ['Item1'],
                     },
                 },
                 PossibleNot => {
@@ -2687,7 +2729,7 @@ $Self->True(
             ReturnSubType => 'State',
             TicketID      => $TicketID,
             DynamicField  => {
-                'DynamicField_' . $DynamicFieldName => ['Item2']
+                'DynamicField_' . $DynamicFieldNames[0] => ['Item2']
             },
             UserID => $UserID,
         },
@@ -4348,29 +4390,31 @@ $Self->True(
     "StateUpdate() ID ($NewStateID) invalidated successfully"
 );
 
-# clean dynamic fields
-my $DynamicFieldValueDeleteSuccess = $DynamicFieldValueObject->AllValuesDelete(
-    FieldID => $DynamicFieldID,
-    UserID  => 1,
-);
+# Clean dynamic fields.
+for my $DynamicFieldID (@DynamicFieldIDs) {
+    my $DynamicFieldValueDeleteSuccess = $DynamicFieldValueObject->AllValuesDelete(
+        FieldID => $DynamicFieldID,
+        UserID  => 1,
+    );
 
-# sanity check
-$Self->True(
-    $DynamicFieldValueDeleteSuccess,
-    "DynamicFieldValue AllValuesDelete() for DynamicField ($DynamicFieldID) deleted successfully"
-);
+    # sanity check
+    $Self->True(
+        $DynamicFieldValueDeleteSuccess,
+        "DynamicFieldValue AllValuesDelete() for DynamicField ($DynamicFieldID) deleted successfully"
+    );
 
-my $DynamicFieldDeleteSuccess = $DynamicFieldObject->DynamicFieldDelete(
-    ID      => $DynamicFieldID,
-    Reorder => 0,
-    UserID  => 1,
-);
+    my $DynamicFieldDeleteSuccess = $DynamicFieldObject->DynamicFieldDelete(
+        ID      => $DynamicFieldID,
+        Reorder => 0,
+        UserID  => 1,
+    );
 
-# sanity check
-$Self->True(
-    $DynamicFieldDeleteSuccess,
-    "DynamicFieldDelete() for DynamicField ($DynamicFieldID) deleted successfully"
-);
+    # sanity check
+    $Self->True(
+        $DynamicFieldDeleteSuccess,
+        "DynamicFieldDelete() for DynamicField ($DynamicFieldID) deleted successfully"
+    );
+}
 
 # clean tickets
 my $TicketDeleteSuccess = $TicketObject->TicketDelete(
