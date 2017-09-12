@@ -1,7 +1,7 @@
 # --
 # Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
 # --
-# $origin: otrs - be4010f3365da552dcfd079c36ad31cc90e06c32 - scripts/test/Selenium/Agent/AgentStatistics/Import.t
+# $origin: otrs - ddbac4df51a7390cf71077971192d452a222ea7b - scripts/test/Selenium/Agent/AgentStatistics/Import.t
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -130,6 +130,27 @@ $Selenium->RunTest(
         }
 
         my $ScriptAlias = $Kernel::OM->Get('Kernel::Config')->Get('ScriptAlias');
+        $Selenium->VerifiedGet("${ScriptAlias}index.pl?Action=AgentStatistics;Subaction=Import");
+
+        # import test selenium statistic
+        my $LocationNotExistingObject = $Kernel::OM->Get('Kernel::Config')->Get('Home')
+            . "/scripts/test/sample/Stats/Stats.Static.NotExisting.xml";
+        $Selenium->find_element( "#File", 'css' )->send_keys($LocationNotExistingObject);
+
+        $Selenium->find_element("//button[\@value='Import'][\@type='submit']")->VerifiedClick();
+
+        # Confirm JS error.
+        $Selenium->find_element( "#DialogButton1", 'css' )->click();
+
+        # Verify error class.
+        $Self->Is(
+            $Selenium->execute_script(
+                "return \$('#File').hasClass('Error')"
+            ),
+            '1',
+            'Import file field has class error',
+        );
+
         $Selenium->VerifiedGet("${ScriptAlias}index.pl?Action=AgentStatistics;Subaction=Import");
 
         # import test selenium statistic
