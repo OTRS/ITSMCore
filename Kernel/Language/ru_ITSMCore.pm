@@ -44,7 +44,7 @@ sub Data {
     # Perl Module: Kernel/Modules/AgentITSMSLAPrint.pm
     $Self->{Translation}->{'No SLAID is given!'} = '';
     $Self->{Translation}->{'SLAID %s not found in database!'} = '';
-    $Self->{Translation}->{'Calendar Default'} = '';
+    $Self->{Translation}->{'Calendar Default'} = 'Календарь по умолчанию';
 
     # Perl Module: Kernel/Modules/AgentITSMServicePrint.pm
     $Self->{Translation}->{'No ServiceID is given!'} = '';

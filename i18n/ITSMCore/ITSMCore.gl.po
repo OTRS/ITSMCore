@@ -1,70 +1,71 @@
 # 
 # Translators:
-# Macbethana Wilfred <mwi@nrd.no>, 2014
+# Arturo Mondelo <arturo.mondelo@hotmail.es>, 2015
+# Xosé <xosecalvo@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: OTRS\n"
 "POT-Creation-Date: 2017-08-21 11:52+0000\n"
-"PO-Revision-Date: 2017-09-21 12:14+0000\n"
+"PO-Revision-Date: 2017-09-22 03:55+0000\n"
 "Last-Translator: Udo Bretz\n"
-"Language-Team: Swahili (http://www.transifex.com/otrs/OTRS/language/sw/)\n"
+"Language-Team: Galician (http://www.transifex.com/otrs/OTRS/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sw\n"
+"Language: gl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Template: AdminITSMCIPAllocate
 msgid "Criticality <-> Impact <-> Priority"
-msgstr "Umuhimu <-> Madhara <-> Kipaumbele"
+msgstr "Criticidad <-> Impacto <-> Prioridade"
 
 #. Template: AdminITSMCIPAllocate
 msgid "Manage the priority result of combinating Criticality <-> Impact."
-msgstr "Simamia matokeo ya kipaumbele ya kuunganisha Umuhimu "
+msgstr "Manexar os resultados prioritarios da combinación Criticidad <-> Impacto"
 
 #. Template: AdminITSMCIPAllocate
 msgid "Priority allocation"
-msgstr "Kuweka kipaumbele"
+msgstr "Asignación da prioridad"
 
 #. Template: AdminSLA
 msgid "Minimum Time Between Incidents"
-msgstr "Kima cha chini cha muda kati ya matukio"
+msgstr "Tempo mínimo entre Incidentes"
 
 #. Template: AdminService
 msgid "Criticality"
-msgstr "Umuhimu"
+msgstr "Criticidad"
 
 #. Template: AgentITSMSLAZoom
 msgid "SLA Information"
-msgstr "Taarifa za SLA"
+msgstr "Información do Acordo do Nivel de Servizo ANS"
 
 #. Template: AgentITSMSLAZoom
 msgid "Last changed"
-msgstr "Mwisho kubadilishwa"
+msgstr "Último cambio"
 
 #. Template: AgentITSMSLAZoom
 msgid "Last changed by"
-msgstr "Mwsho kubadilishwa na"
+msgstr "Último cambio feito por"
 
 #. Template: AgentITSMSLAZoom
 msgid "Associated Services"
-msgstr "Huduma zinazohusika"
+msgstr "Servizos asociados"
 
 #. Template: AgentITSMServiceZoom
 msgid "Service Information"
-msgstr "Taarifa za huduma"
+msgstr "Información do Servizo"
 
 #. Template: AgentITSMServiceZoom
 msgid "Current incident state"
-msgstr "Hali ya tukio la sasa"
+msgstr "Estado actual do incidente"
 
 #. Template: AgentITSMServiceZoom
 msgid "Associated SLAs"
-msgstr "SLA zinazohusika"
+msgstr "ANS asociados"
 
 #. Perl Module: Kernel/Modules/AdminITSMCIPAllocate.pm
 msgid "Impact"
-msgstr "Madhara"
+msgstr "Impacto"
 
 #. Perl Module: Kernel/Modules/AgentITSMSLAPrint.pm
 msgid "No SLAID is given!"
@@ -88,87 +89,87 @@ msgstr ""
 
 #. Perl Module: Kernel/Modules/AgentITSMServicePrint.pm
 msgid "Current Incident State"
-msgstr "Hali ya tukio la sasa"
+msgstr "Estado do Incidente actual"
 
 #. Perl Module: Kernel/Output/HTML/LinkObject/Service.pm
 msgid "Incident State"
-msgstr "Hali ya tukio"
+msgstr "Estado do Incidente"
 
 #. Database XML Definition: ITSMCore.sopm
 msgid "Operational"
-msgstr "Uendeshaji"
+msgstr "Funcional"
 
 #. Database XML Definition: ITSMCore.sopm
 msgid "Incident"
-msgstr "Tukio"
+msgstr "Incidente"
 
 #. Database XML Definition: ITSMCore.sopm
 msgid "End User Service"
-msgstr "Huduma ya mtumiaji wa mwihso"
+msgstr "Servizo usuario final"
 
 #. Database XML Definition: ITSMCore.sopm
 msgid "Front End"
-msgstr "Mazingira ya mbele"
+msgstr "Interface"
 
 #. Database XML Definition: ITSMCore.sopm
 msgid "Back End"
-msgstr "Mazingira ya nyuma"
+msgstr "Infraestrutura"
 
 #. Database XML Definition: ITSMCore.sopm
 msgid "IT Management"
-msgstr "Usimamizi wa IT"
+msgstr "Xestión TI"
 
 #. Database XML Definition: ITSMCore.sopm
 msgid "Reporting"
-msgstr "Uarifu"
+msgstr "Informes"
 
 #. Database XML Definition: ITSMCore.sopm
 msgid "IT Operational"
-msgstr "Uendeshaji wa IT"
+msgstr "Operación TI"
 
 #. Database XML Definition: ITSMCore.sopm
 msgid "Demonstration"
-msgstr "Maonyesho"
+msgstr "Demostración"
 
 #. Database XML Definition: ITSMCore.sopm
 msgid "Project"
-msgstr "Mradi"
+msgstr "Proxecto"
 
 #. Database XML Definition: ITSMCore.sopm
 msgid "Underpinning Contract"
-msgstr "Mkataba wa kuimarisha"
+msgstr "Contrato de soporte"
 
 #. Database XML Definition: ITSMCore.sopm
 msgid "Other"
-msgstr "Engine"
+msgstr "Outros"
 
 #. Database XML Definition: ITSMCore.sopm
 msgid "Availability"
-msgstr "Upatikanaji"
+msgstr "Dispoñibilidade"
 
 #. Database XML Definition: ITSMCore.sopm
 msgid "Response Time"
-msgstr "Muda wa majibu"
+msgstr "Tempo de resposta"
 
 #. Database XML Definition: ITSMCore.sopm
 msgid "Recovery Time"
-msgstr "Muda wa kupona"
+msgstr "Tempo de recuperación"
 
 #. Database XML Definition: ITSMCore.sopm
 msgid "Resolution Rate"
-msgstr "Kiwango cha muonekano"
+msgstr "Indice de resolución"
 
 #. Database XML Definition: ITSMCore.sopm
 msgid "Transactions"
-msgstr "Miamala"
+msgstr "Transaccións"
 
 #. Database XML Definition: ITSMCore.sopm
 msgid "Errors"
-msgstr "Makosa"
+msgstr "Erros"
 
 #. SysConfig
 msgid "Alternative to"
-msgstr "Badala ya "
+msgstr "Alternativa a"
 
 #. SysConfig
 msgid "Both"
@@ -176,7 +177,7 @@ msgstr ""
 
 #. SysConfig
 msgid "Connected to"
-msgstr "Imeunganishwa na"
+msgstr "Conectado a"
 
 #. SysConfig
 msgid ""
@@ -197,49 +198,49 @@ msgstr ""
 
 #. SysConfig
 msgid "Depends on"
-msgstr "Inategemeana na "
+msgstr "Depende de"
 
 #. SysConfig
 msgid ""
 "Frontend module registration for the AdminITSMCIPAllocate configuration in "
 "the admin area."
-msgstr "Usajili wa moduli za mazingira ya mbele kwa usanidi wa AdminITSMCIPAllocate katika eneo la kiongozi."
+msgstr "Rexistro Módulo FrontEnd para ó AdminITSMCIP da configuración asignada na área de administración"
 
 #. SysConfig
 msgid ""
 "Frontend module registration for the AgentITSMSLA object in the agent "
 "interface."
-msgstr "Usajili wa moduli ya mazingira ya mbele kwa kipengee cha ITSMSLA cha wakala  katika kiolesura cha wakala."
+msgstr "Rexistro Módulo FrontEnd para ó obxeto AgentITSMSLA na interface do axente"
 
 #. SysConfig
 msgid ""
 "Frontend module registration for the AgentITSMSLAPrint object in the agent "
 "interface."
-msgstr "Usajili wa moduli ya mazingira ya mbele kwa kipengee cha  uchapishwaji cha ITSMSLA cha wakala katika kiolesura cha wakala"
+msgstr "Rexistro Módulo FrontEnd para ó  obxeto imprimir AgentITSMSLA na interface do axente"
 
 #. SysConfig
 msgid ""
 "Frontend module registration for the AgentITSMSLAZoom object in the agent "
 "interface."
-msgstr "Usajili wa moduli ya mazingira ya mbele kwa kipengee cha kukuzwa cha ITSMSLA cha wakala katika kiolesura cha wakala"
+msgstr "Rexistro Módulo FrontEnd para ó  obxeto zoom AgentITSMSLA na interface do axente"
 
 #. SysConfig
 msgid ""
 "Frontend module registration for the AgentITSMService object in the agent "
 "interface."
-msgstr "Usajili wa moduli ya mazingira ya mbele kwa kipengee cha huduma cha ITSMSLA cha wakala katika kiolesura cha wakala."
+msgstr "Rexistro Módulo FrontEnd para ó  obxeto servizo AgentITSMSLA na interface do axente"
 
 #. SysConfig
 msgid ""
 "Frontend module registration for the AgentITSMServicePrint object in the "
 "agent interface."
-msgstr "Usajili wa moduli ya mazingira ya mbele kwa kipengee cha kuchapishwa kwa huduma cha ITSMSLA cha wakala katika kiolesura cha wakala."
+msgstr "Rexistro Módulo FrontEnd para ó  obxeto servizo imprimir AgentITSM na interface do axente"
 
 #. SysConfig
 msgid ""
 "Frontend module registration for the AgentITSMServiceZoom object in the "
 "agent interface."
-msgstr "Usajili wa moduli ya mazingira ya mbele kwa kipengee cha kukuzwa kwa huduma cha ITSMSLA cha wakala katika kiolesura cha wakala."
+msgstr "Rexistro Módulo FrontEnd para ó  obxeto servizo zoom AgentITSM na interface do axente"
 
 #. SysConfig
 msgid "ITSM SLA Overview."
@@ -259,51 +260,51 @@ msgstr ""
 
 #. SysConfig
 msgid "Includes"
-msgstr "Inahusisha"
+msgstr "inclúe"
 
 #. SysConfig
 msgid "Manage priority matrix."
-msgstr "Simamia matriki ya kipaumbele."
+msgstr "Manexar a prioridade da matriz"
 
 #. SysConfig
 msgid "Module to show back link in service menu."
-msgstr "Moduli ya kuonyesha kiungo cha kurudi nyuma katika menyu ya huduma."
+msgstr "Módulo para mostrar enlace posterior en menú de servizo"
 
 #. SysConfig
 msgid "Module to show back link in sla menu."
-msgstr "Moduli ya kuonyesha kiungo cha kurudi nyuma katika menyu ya sla."
+msgstr "Módulo para mostrar enlace posterior en menú do ANS"
 
 #. SysConfig
 msgid "Module to show print link in service menu."
-msgstr "Moduli ya kuonyesha kiungo cha kuchapisha katika menyu ya huduma."
+msgstr "Módulo para mostrar enlace de impresión no menú de servizo"
 
 #. SysConfig
 msgid "Module to show print link in sla menu."
-msgstr "Moduli ya kuonyesha kiungo cha kuchapisha katika menyu ya sla."
+msgstr "Módulo para mostrar enlace de impresión no menú do ANS"
 
 #. SysConfig
 msgid "Module to show the link link in service menu."
-msgstr "Moduli ya kuonyesha kiungo cha kiungo katika menyu ya huduma."
+msgstr "Módulo para mostrar enlace ó enlace no menú de servizo"
 
 #. SysConfig
 msgid "Parameters for the incident states in the preference view."
-msgstr "Vigezo ya hali ya matukio katika mandhari ya mapendeleo."
+msgstr "Parámetros para os estados do incidente na vista de preferencia"
 
 #. SysConfig
 msgid "Part of"
-msgstr "Sehemu ya"
+msgstr "Parte de"
 
 #. SysConfig
 msgid "Relevant to"
-msgstr "Husiana na"
+msgstr "Relevante para"
 
 #. SysConfig
 msgid "Required for"
-msgstr "Inahitajika kwa"
+msgstr "Requirido por"
 
 #. SysConfig
 msgid "SLA Overview"
-msgstr "Marejeo ya SLA"
+msgstr "Vista xeral do Acordo do Nivel de Servizo"
 
 #. SysConfig
 msgid "SLA Print."
@@ -315,7 +316,7 @@ msgstr ""
 
 #. SysConfig
 msgid "Service Overview"
-msgstr "Marejeo ya huduma"
+msgstr "Vista xeral do servizo"
 
 #. SysConfig
 msgid "Service Print."
@@ -327,7 +328,7 @@ msgstr ""
 
 #. SysConfig
 msgid "Service-Area"
-msgstr "Eneo la huduma"
+msgstr "Área do servizo"
 
 #. SysConfig
 msgid ""
@@ -350,139 +351,139 @@ msgstr ""
 msgid ""
 "This setting defines that a 'ITSMChange' object can be linked with 'Ticket' "
 "objects using the 'Normal' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Badiliko la ITSM' kinweza kuunganishwa na kipengee cha 'Tiketi' kwa kutumia aina ya kiungo 'Kawaida'."
+msgstr "Este axuste define que un obxecto de 'ITSMChange' pode ser conectado con obxectos 'Ticket' que utilizan o tipo de enlace 'Normal'."
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'ITSMConfigItem' object can be linked with 'FAQ'"
 " objects using the 'Normal' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Kipengele cha usanidi cha ITSM' kinaweza kuunganishwa na kipengee cha 'Maswali yanayoulizwa mara kwa mara' kwa kutumia aina ya kiungo 'Kawaida'."
+msgstr "Este axuste define que un obxecto de 'ITSMConfigItem' pode ser conectado con obxectos de 'FAQ' que utilizan o tipo de enlace 'Normal'."
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'ITSMConfigItem' object can be linked with 'FAQ'"
 " objects using the 'ParentChild' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Kipengele cha usanidi cha ITSM' kinaweza kuunganishwa na kipengee cha 'Maswali yanayoulizwa mara kwa mara' kwa kutumia aina ya kiungo 'ParentChild'."
+msgstr "Este axuste define que un obxecto de 'ITSMConfigItem' pode ser conectado con obxectos de 'FAQ' que utilizan o tipo de enlace de 'ParentChild'."
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'ITSMConfigItem' object can be linked with 'FAQ'"
 " objects using the 'RelevantTo' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Kipengele cha usanidi cha ITSM' kinaweza kuunganishwa na kipengee cha 'Maswali yanayoulizwa mara kwa mara' kwa kutumia aina ya kiungo 'Inahusiana na'."
+msgstr "Este axuste define que un obxecto de 'ITSMConfigItem' pode ser conectado con obxectos de 'FAQ' que utilizan o tipo de enlace de 'RelevantTo'."
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'ITSMConfigItem' object can be linked with "
 "'Service' objects using the 'AlternativeTo' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Kipengele cha usanidi cha ITSM' kinaweza kuunganishwa na kipengee cha 'Huduma' kwa kutumia aina ya kiungo 'Badala ya'."
+msgstr "Este axuste define que un obxecto de 'ITSMConfigItem' pode ser conectado con obxectos de 'Service' que utilizan o tipo de enlace de 'AlternativeTo'."
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'ITSMConfigItem' object can be linked with "
 "'Service' objects using the 'DependsOn' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Kipengele cha usanidi cha ITSM' kinaweza kuunganishwa na kipengee cha 'Huduma' kwa kutumia aina ya kiungo 'Inategemeana na'."
+msgstr "Este axuste define que un obxecto de 'ITSMConfigItem' pode ser conectado con obxectos de 'Service' que utilizan o tipo de enlace de 'DependsOn'."
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'ITSMConfigItem' object can be linked with "
 "'Service' objects using the 'RelevantTo' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Kipengele cha usanidi cha ITSM' kinaweza kuunganishwa na kipengee cha 'Huduma' kwa kutumia aina ya kiungo 'Husiana na'."
+msgstr "Este axuste define que un obxecto de 'ITSMConfigItem' pode ser conectado con obxectos de 'Service' que utilizan o tipo de enlace de 'RelevantTo'."
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'ITSMConfigItem' object can be linked with "
 "'Ticket' objects using the 'AlternativeTo' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Kipengele cha usanidi cha ITSM' kinaweza kuunganishwa na kipengee cha 'Tiketi' kwa kutumia aina ya kiungo 'Badala ya'."
+msgstr "Este axuste define que o obxeto 'ITSMConfigItem' pode ser vinculado con obxetos 'Ticket' empregando o tipo de vinculación 'AlternativeTo'"
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'ITSMConfigItem' object can be linked with "
 "'Ticket' objects using the 'DependsOn' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Kipengele cha usanidi cha ITSM' kinaweza kuunganishwa na kipengee cha 'Tiketi' kwa kutumia aina ya kiungo 'Inategemeana na'."
+msgstr "Este axuste define que o obxeto 'ITSMConfigItem' pode ser vinculado con obxetos 'Ticket' empregando o tipo de vinculación 'DependsOn'"
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'ITSMConfigItem' object can be linked with "
 "'Ticket' objects using the 'RelevantTo' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Kipengele cha usanidi cha ITSM' kinaweza kuunganishwa na kipengee cha 'Tiketi' kwa kutumia aina ya kiungo 'Husiana na'."
+msgstr "Este axuste define que o obxeto 'ITSMConfigItem' pode ser vinculado con obxetos 'Ticket' empregando o tipo de vinculación 'RelevantTo'"
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'ITSMConfigItem' object can be linked with other"
 " 'ITSMConfigItem' objects using the 'AlternativeTo' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Kipengele cha usanidi cha ITSM' kinaweza kuunganishwa na kipengee kingine cha'Kipengele cha usanidi cha ITSM'  kwa kutumia aina ya kiungo 'Badala ya'."
+msgstr "Este axuste define que o obxeto 'ITSMConfigItem' pode ser vinculado con outros obxetos 'ITSMConfigItem' empregando o tipo de vinculación 'AlternativeTo'"
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'ITSMConfigItem' object can be linked with other"
 " 'ITSMConfigItem' objects using the 'ConnectedTo' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Kipengele cha usanidi cha ITSM' kinaweza kuunganishwa na kipengee kingine cha'Kipengele cha usanidi cha ITSM'  kwa kutumia aina ya kiungo 'Inaunganishwa na'."
+msgstr "Este axuste define que o obxeto 'ITSMConfigItem' pode ser vinculado con outros obxetos 'ITSMConfigItem' empregando o tipo de vinculación 'ConnectedTo'"
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'ITSMConfigItem' object can be linked with other"
 " 'ITSMConfigItem' objects using the 'DependsOn' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Kipengele cha usanidi cha ITSM' kinaweza kuunganishwa na kipengee kingine cha'Kipengele cha usanidi cha ITSM'  kwa kutumia aina ya kiungo 'Inategemeana na'."
+msgstr "Este axuste define que o obxeto 'ITSMConfigItem' pode ser vinculado con outros obxetos 'ITSMConfigItem' empregando o tipo de vinculación 'DependsOn'"
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'ITSMConfigItem' object can be linked with other"
 " 'ITSMConfigItem' objects using the 'Includes' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Kipengele cha usanidi cha ITSM' kinaweza kuunganishwa na kipengee kingine cha'Kipengele cha usanidi cha ITSM'  kwa kutumia aina ya kiungo 'Husisha'."
+msgstr "Este axuste define que o obxeto 'ITSMConfigItem' pode ser vinculado con outros obxetos 'ITSMConfigItem' empregando o tipo de vinculación 'Includes'"
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'ITSMConfigItem' object can be linked with other"
 " 'ITSMConfigItem' objects using the 'RelevantTo' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Kipengele cha usanidi cha ITSM' kinaweza kuunganishwa na kipengee kingine cha'Kipengele cha usanidi cha ITSM'  kwa kutumia aina ya kiungo 'Husiana na'."
+msgstr "Este axuste define que o obxeto 'ITSMConfigItem' pode ser vinculado con outros obxetos 'ITSMConfigItem' empregando o tipo de vinculación 'RelevantTo'"
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'ITSMWorkOrder' object can be linked with "
 "'ITSMConfigItem' objects using the 'DependsOn' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Mpangilio wa kazi wa ITSM' kinaweza kuunganishwa na kipengee kingine cha'Kipengele cha usanidi cha ITSM'  kwa kutumia aina ya kiungo 'Inategemeana na'."
+msgstr "Este axuste define que o obxeto 'ITSMWorkOrder' pode ser vinculado con obxetos 'ITSMConfigItem' empregando o tipo de vinculación 'DependsOn'"
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'ITSMWorkOrder' object can be linked with "
 "'ITSMConfigItem' objects using the 'Normal' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Mpangilio wa kazi wa ITSM' kinaweza kuunganishwa na kipengee kingine cha'Kipengele cha usanidi cha ITSM'  kwa kutumia aina ya kiungo 'Kawaida'."
+msgstr "Este axuste define que o obxeto 'ITSMWorkOrder' pode ser vinculado con obxetos 'ITSMConfigItem' empregando o tipo de vinculación 'Normal'"
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'ITSMWorkOrder' object can be linked with "
 "'Service' objects using the 'DependsOn' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Mpangilio wa kazi wa ITSM' kinaweza kuunganishwa na kipengee kingine cha'Huduma' kwa kutumia aina ya kiungo 'Inategemeana na'."
+msgstr "Este axuste define que o obxeto 'ITSMWorkOrder' pode ser vinculado con obxetos 'Service' empregando o tipo de vinculación 'DependsOn'"
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'ITSMWorkOrder' object can be linked with "
 "'Service' objects using the 'Normal' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Mpangilio wa kazi wa ITSM' kinaweza kuunganishwa na kipengee kingine cha'Huduma' kwa kutumia aina ya kiungo 'Kawaida'."
+msgstr "Este axuste define que o obxeto 'ITSMWorkOrder' pode ser vinculado con obxetos 'Service' empregando o tipo de vinculación 'Normal'"
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'ITSMWorkOrder' object can be linked with "
 "'Ticket' objects using the 'Normal' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Mpangilio wa kazi wa ITSM' kinaweza kuunganishwa na kipengee kingine cha'Tiketi' kwa kutumia aina ya kiungo 'Kawaida'."
+msgstr "Este axuste define que o obxeto 'ITSMWorkOrder' pode ser vinculado con obxetos 'Ticket' empregando o tipo de vinculación 'Normal'"
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'Service' object can be linked with 'FAQ' "
 "objects using the 'Normal' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Huduma' kinaweza kuunganishwa na kipengee cha 'Maswali yanayoulizwa mara kwa mara' kwa kutumia aina ya kiungo 'Kawaida'."
+msgstr "Este axuste define que o obxeto 'Service' pode ser vinculado con obxetos 'FAQ' empregando o tipo de vinculación 'Normal'"
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'Service' object can be linked with 'FAQ' "
 "objects using the 'ParentChild' link type."
-msgstr "Mpangilio huu unafafanua kwamba kipengee cha 'Huduma' kinaweza kuunganishwa na kipengee cha 'Maswali yanayoulizwa mara kwa mara' kwa kutumia aina ya kiungo 'ParentChild'."
+msgstr "Este axuste define que o obxeto 'Service' pode ser vinculado con obxetos 'FAQ' empregando o tipo de vinculación 'ParentChild'"
 
 #. SysConfig
 msgid ""
 "This setting defines that a 'Service' object can be linked with 'FAQ' "
 "objects using the 'RelevantTo' link type."
-msgstr "Husiana na"
+msgstr "Este axuste define que o obxeto 'Service' pode ser vinculado con obxetos 'FAQ' empregando o tipo de vinculación 'RelevantTo'"
 
 #. SysConfig
 msgid ""
@@ -490,36 +491,36 @@ msgid ""
 "the target name contain the same value, the resulting link is a non-"
 "directional one. If the values are different, the resulting link is a "
 "directional link."
-msgstr "Mipangilio hii inafafanua aina ya kiungo 'Badala ya'. Kama jina la chanzo na jina lengwa yana thamani moja, kiungo kinachotokana ni hakina uelekeo. Kama thamani ni tofauti, kiungo kilichotokea kina uelekeo."
+msgstr "Este axuste define o tipo de vinculación 'AlternativeTo'. Se o nome fonte e o nome do obxetivo conteñen o mesmo valor, a vinculación resultante é unha non direccional. Se os valores son diferentes, a vinculación resultante é unha direccional."
 
 #. SysConfig
 msgid ""
 "This setting defines the link type 'ConnectedTo'. If the source name and the"
 " target name contain the same value, the resulting link is a non-directional"
 " one. If the values are different, the resulting link is a directional link."
-msgstr "Mipangilio hii inafafanua aina ya kiungo 'Imeunganishwa na'. Kama jina la chanzo na jina lengwa yana thamani moja, kiungo kinachotokana ni hakina uelekeo. Kama thamani ni tofauti, kiungo kilichotokea kina uelekeo."
+msgstr "Este axuste define o tipo de vinculación 'ConnectedTo'. Se o nome fonte e o nome do obxetivo conteñen o mesmo valor, a vinculación resultante é unha non direccional. Se os valores son diferentes, a vinculación resultante é unha direccional."
 
 #. SysConfig
 msgid ""
 "This setting defines the link type 'DependsOn'. If the source name and the "
 "target name contain the same value, the resulting link is a non-directional "
 "one. If the values are different, the resulting link is a directional link."
-msgstr "Mipangilio hii inafafanua aina ya kiungo 'Inategemeana na'. Kama jina la chanzo na jina lengwa yana thamani moja, kiungo kinachotokana ni hakina uelekeo. Kama thamani ni tofauti, kiungo kilichotokea kina uelekeo."
+msgstr "Este axuste define o tipo de vinculación 'DependsOn'. Se o nome fonte e o nome do obxetivo conteñen o mesmo valor, a vinculación resultante é unha non direccional. Se os valores son diferentes, a vinculación resultante é unha direccional."
 
 #. SysConfig
 msgid ""
 "This setting defines the link type 'Includes'. If the source name and the "
 "target name contain the same value, the resulting link is a non-directional "
 "one. If the values are different, the resulting link is a directional link."
-msgstr "Mipangilio hii inafafanua aina ya kiungo 'Inahusisha'. Kama jina la chanzo na jina lengwa yana thamani moja, kiungo kilichotokea ni hakina uelekeo. Kama thamani ni tofauti, kiungo kilichotokea kina uelekeo."
+msgstr "Este axuste define o tipo de vinculación 'Includes'. Se o nome fonte e o nome do obxetivo conteñen o mesmo valor, a vinculación resultante é unha non direccional. Se os valores son diferentes, a vinculación resultante é unha direccional."
 
 #. SysConfig
 msgid ""
 "This setting defines the link type 'RelevantTo'. If the source name and the "
 "target name contain the same value, the resulting link is a non-directional "
 "one. If the values are different, the resulting link is a directional link."
-msgstr "Mipangilio hii inafafanua aina ya kiungo 'Husiana na'. Kama jina la chanzo na jina lengwa yana thamani moja, kiungo kilichotokea ni hakina uelekeo. Kama thamani ni tofauti, kiungo kilichotokea kina uelekeo."
+msgstr "Este axuste define o tipo de vinculación 'RelevantTo'. Se o nome fonte e o nome do obxetivo conteñen o mesmo valor, a vinculación resultante é unha non direccional. Se os valores son diferentes, a vinculación resultante é unha direccional."
 
 #. SysConfig
 msgid "Width of ITSM textareas."
-msgstr "Upana wa eneo la matini la ITSM "
+msgstr "Anchura das áreas de texto da ITSM."

@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: OTRS\n"
-"POT-Creation-Date: 2017-07-10 14:53+0000\n"
-"PO-Revision-Date: 2017-07-10 12:53+0000\n"
+"POT-Creation-Date: 2017-08-21 11:52+0000\n"
+"PO-Revision-Date: 2017-09-21 12:14+0000\n"
 "Last-Translator: Udo Bretz\n"
 "Language-Team: Persian (http://www.transifex.com/otrs/OTRS/language/fa/)\n"
 "MIME-Version: 1.0\n"
@@ -132,10 +132,6 @@ msgstr "نمایش"
 #. Database XML Definition: ITSMCore.sopm
 msgid "Project"
 msgstr "پروژه"
-
-#. Database XML Definition: ITSMCore.sopm
-msgid "Training"
-msgstr "آموزشی"
 
 #. Database XML Definition: ITSMCore.sopm
 msgid "Underpinning Contract"
