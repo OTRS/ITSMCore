@@ -7,11 +7,11 @@
 # --
 
 <div class="MainBox ARIARoleMain LayoutFixedSidebar SidebarFirst">
-    <h1 class="InvisibleText">[% Translate("Criticality <-> Impact <-> Priority") | html %]</h1>
+    <h1 class="InvisibleText">[% Translate("Criticality ↔ Impact ↔ Priority") | html %]</h1>
 
     [% BreadcrumbPath = [
             {
-                Name => Translate('Criticality <-> Impact <-> Priority'),
+                Name => Translate('Criticality ↔ Impact ↔ Priority'),
                 Link => Env("Action"),
             },
         ]
