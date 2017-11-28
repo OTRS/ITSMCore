@@ -1,7 +1,7 @@
 # --
 # Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
 # --
-# $origin: otrs - fd7cceb8373782599ad2c379ed7db1dbd768d6c1 - Kernel/Output/HTML/Templates/Standard/AdminService.tt
+# $origin: otrs - 94bbaffef350f0cdc7804603bc256eb3d454cf46 - Kernel/Output/HTML/Templates/Standard/AdminService.tt
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -87,7 +87,7 @@
             </div>
             <div class="Content">
 
-                <form action="[% Env("CGIHandle") %]" method="post" class="Validate">
+                <form action="[% Env("CGIHandle") %]" method="post" class="Validate PreventMultipleSubmits">
                     <input type="hidden" name="Action" value="[% Env("Action") %]"/>
                     <input type="hidden" name="Subaction" value="ServiceSave"/>
                     <input type="hidden" name="ServiceID" value="[% Data.ServiceID | html %]"/>
