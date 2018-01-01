@@ -1,5 +1,5 @@
 # --
-# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
+# Copyright (C) 2001-2018 OTRS AG, http://otrs.com/
 # --
 # $origin: otrs - 04f244c480bab7b3874948d1501565d45f46b9d6 - scripts/test/Console/Command/Admin/Service/Add.t
 # --

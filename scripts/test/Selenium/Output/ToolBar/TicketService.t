@@ -1,5 +1,5 @@
 # --
-# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
+# Copyright (C) 2001-2018 OTRS AG, http://otrs.com/
 # --
 # $origin: otrs - feedce2d6c22aa3325d5ee22bae640718799e918 - scripts/test/Selenium/Output/ToolBar/TicketService.t
 # --
