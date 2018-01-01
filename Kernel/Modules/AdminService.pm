@@ -1,5 +1,5 @@
 # --
-# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
+# Copyright (C) 2001-2018 OTRS AG, http://otrs.com/
 # --
 # $origin: otrs - d659752d7433d9bd97c7ac9b77fcdbc4941e14eb - Kernel/Modules/AdminService.pm
 # --

@@ -1,5 +1,5 @@
 # --
-# Copyright (C) 2001-2017 OTRS AG, http://otrs.com/
+# Copyright (C) 2001-2018 OTRS AG, http://otrs.com/
 # --
 # $origin: otrs - da5bd0505edb4a3ae017470e61c318b0a7ffb038 - scripts/test/ProcessManagement/Process.t
 # --
