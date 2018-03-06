@@ -1,7 +1,7 @@
 # --
 # Copyright (C) 2001-2018 OTRS AG, http://otrs.com/
 # --
-# $origin: otrs - 7176d686c8a53f00ad7d6ef2208e93056a0893ab - scripts/test/Ticket.t
+# $origin: otrs - 6559a7a0ada76af361b47b13d2cbbea64361e6a7 - scripts/test/Ticket.t
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you

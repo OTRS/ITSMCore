@@ -1,7 +1,7 @@
 # --
 # Copyright (C) 2001-2018 OTRS AG, http://otrs.com/
 # --
-# $origin: otrs - 2c7845c30423ec985b111c9e36237e04ba949549 - scripts/test/GenericInterface/Operation/Ticket/TicketCreate.t
+# $origin: otrs - 85fe7004c5834a7321876b126bb5f78657a485ef - scripts/test/GenericInterface/Operation/Ticket/TicketCreate.t
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -3946,7 +3946,7 @@ my @Tests        = (
     },
 
     {
-        Name           => 'Create DynamicFields (with wrong value)',
+        Name           => 'Create DynamicFields (with wrong value type)',
         SuccessRequest => 1,
         SuccessCreate  => 0,
         RequestData    => {
@@ -4011,6 +4011,70 @@ my @Tests        = (
         },
         Operation => 'TicketCreate',
     },
+
+    {
+        Name           => 'Create DynamicFields (with invalid value)',
+        SuccessRequest => 1,
+        SuccessCreate  => 0,
+        RequestData    => {
+            Ticket => {
+                Title         => 'Ticket Title',
+                CustomerUser  => $TestCustomerUserLogin,
+                QueueID       => $Queues[0]->{QueueID},
+                TypeID        => $TypeID,
+                ServiceID     => $ServiceID,
+                SLAID         => $SLAID,
+                StateID       => $StateID,
+                PriorityID    => $PriorityID,
+                OwnerID       => $OwnerID,
+                ResponsibleID => $ResponsibleID,
+                PendingTime   => {
+                    Year   => 2012,
+                    Month  => 12,
+                    Day    => 16,
+                    Hour   => 20,
+                    Minute => 48,
+                },
+            },
+            Article => {
+                Subject                         => 'Article subject',
+                Body                            => 'Article body',
+                AutoResponseType                => 'auto reply',
+                ArticleTypeID                   => 1,
+                SenderTypeID                    => 1,
+                From                            => 'enjoy@otrs.com',
+                ContentType                     => 'text/plain; charset=UTF8',
+                HistoryType                     => 'NewTicket',
+                HistoryComment                  => '% % ',
+                TimeUnit                        => 25,
+                ForceNotificationToUserID       => [1],
+                ExcludeNotificationToUserID     => [1],
+                ExcludeMuteNotificationToUserID => [1],
+            },
+            DynamicField => [
+                {
+                    Name  => "Unittest2$RandomID",
+                    Value => '4',                    # invalid value
+                },
+            ],
+            Attachment => {
+                Content     => 'VGhpcyBpcyBhIHRlc3QgdGV4dC4=',
+                ContentType => 'text/plain; charset=UTF8',
+                Disposition => 'attachment',
+                Filename    => 'Test.txt',
+            },
+        },
+        ExpectedData => {
+            Data => {
+                Error => {
+                    ErrorCode => 'TicketCreate.InvalidParameter',
+                },
+            },
+            Success => 1
+        },
+        Operation => 'TicketCreate',
+    },
+
     {
         Name           => 'Ticket with Alias Charsets attachment',
         SuccessRequest => 1,
