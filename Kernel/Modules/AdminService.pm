@@ -1,7 +1,7 @@
 # --
 # Copyright (C) 2001-2018 OTRS AG, http://otrs.com/
 # --
-# $origin: otrs - d659752d7433d9bd97c7ac9b77fcdbc4941e14eb - Kernel/Modules/AdminService.pm
+# $origin: otrs - a4512636fc11eff48b5864b208e064bb1cce29f3 - Kernel/Modules/AdminService.pm
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
