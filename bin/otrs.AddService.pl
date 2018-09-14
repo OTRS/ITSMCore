@@ -2,7 +2,7 @@
 # --
 # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
-# $origin: otrs - a4512636fc11eff48b5864b208e064bb1cce29f3 - bin/otrs.AddService.pl
+# $origin: otrs - 77d4495533edfdbd2370353edad87839ee636357 - bin/otrs.AddService.pl
 # --
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
