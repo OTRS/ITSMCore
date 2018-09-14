@@ -3,8 +3,8 @@
     <Name>ITSMCore</Name>
 <!-- nofilter(TidyAll::Plugin::OTRS::SOPM::DocumentationPresent) -->
     <Version>0.0.0</Version>
-    <Framework Minimum="4.0.31">4.0.x</Framework>
-    <PackageRequired Version="4.0.31">GeneralCatalog</PackageRequired>
+    <Framework Minimum="4.0.32">4.0.x</Framework>
+    <PackageRequired Version="4.0.32">GeneralCatalog</PackageRequired>
     <Vendor>OTRS AG</Vendor>
     <URL>https://otrs.com/</URL>
     <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
@@ -407,7 +407,7 @@
         <br/>
         <strong>REQUIRED OTRS PACKAGES</strong>
         <ul>
-        <li>GeneralCatalog 4.0.31</li>
+        <li>GeneralCatalog 4.0.32</li>
         </ul>
         <br/>
         <br/>
@@ -426,7 +426,7 @@
         <br/>
         <strong>BENÖTIGTE OTRS-PAKETE</strong>
         <ul>
-        <li>GeneralCatalog 4.0.31</li>
+        <li>GeneralCatalog 4.0.32</li>
         </ul>
         <br/>
         <br/>
@@ -445,7 +445,7 @@
         <br/>
         <strong>PAQUETES REQUERIDOS</strong>
         <ul>
-        <li>GeneralCatalog 4.0.31</li>
+        <li>GeneralCatalog 4.0.32</li>
         </ul>
         <br/>
         <br/>
@@ -512,7 +512,7 @@
         <br/>
         <strong>REQUIRED OTRS PACKAGES</strong>
         <ul>
-        <li>GeneralCatalog 4.0.31</li>
+        <li>GeneralCatalog 4.0.32</li>
         </ul>
         <br/>
         <br/>
@@ -531,7 +531,7 @@
         <br/>
         <strong>BENÖTIGTE OTRS-PAKETE</strong>
         <ul>
-        <li>GeneralCatalog 4.0.31</li>
+        <li>GeneralCatalog 4.0.32</li>
         </ul>
         <br/>
         <br/>
@@ -550,7 +550,7 @@
         <br/>
         <strong>PAQUETES REQUERIDOS</strong>
         <ul>
-        <li>GeneralCatalog 4.0.31</li>
+        <li>GeneralCatalog 4.0.32</li>
         </ul>
         <br/>
         <br/>
