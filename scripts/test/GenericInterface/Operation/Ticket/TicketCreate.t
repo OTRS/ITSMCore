@@ -1,7 +1,7 @@
 # --
 # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
-# $origin: otrs - ca27120a296d64d7bea88b10ac94c7848bad89da - scripts/test/GenericInterface/Operation/Ticket/TicketCreate.t
+# $origin: otrs - 2b7857af908cf668484aa42efad6c3573ac9173f - scripts/test/GenericInterface/Operation/Ticket/TicketCreate.t - rel-5_0_33
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
@@ -395,11 +395,11 @@ my %DynamicFieldDropdownConfig = (
     Label      => 'Description',
     ValidID    => 1,
     Config     => {
-        PossibleValues => [
+        PossibleValues => {
             1 => 'One',
             2 => 'Two',
             3 => 'Three',
-        ],
+        },
     },
 );
 my $FieldDropdownID = $DynamicFieldObject->DynamicFieldAdd(
@@ -424,11 +424,11 @@ my %DynamicFieldMultiselectConfig = (
     Label      => 'Multiselect label',
     ValidID    => 1,
     Config     => {
-        PossibleValues => [
+        PossibleValues => {
             1 => 'Value9ßüß',
             2 => 'DifferentValue',
             3 => '1234567',
-        ],
+        },
     },
 );
 my $FieldMultiselectID = $DynamicFieldObject->DynamicFieldAdd(
