@@ -1,7 +1,7 @@
 # --
 # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
-# $origin: otrs - 2b7857af908cf668484aa42efad6c3573ac9173f - scripts/test/GenericInterface/Operation/Ticket/TicketCreate.t - rel-5_0_33
+# $origin: otrs - 2ab9c4a88444da66afd8f87c8acd5db0b890d929 - scripts/test/GenericInterface/Operation/Ticket/TicketCreate.t
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
@@ -395,11 +395,11 @@ my %DynamicFieldDropdownConfig = (
     Label      => 'Description',
     ValidID    => 1,
     Config     => {
-        PossibleValues => {
+        PossibleValues => [
             1 => 'One',
             2 => 'Two',
             3 => 'Three',
-        },
+        ],
     },
 );
 my $FieldDropdownID = $DynamicFieldObject->DynamicFieldAdd(
@@ -424,11 +424,11 @@ my %DynamicFieldMultiselectConfig = (
     Label      => 'Multiselect label',
     ValidID    => 1,
     Config     => {
-        PossibleValues => {
+        PossibleValues => [
             1 => 'Value9ßüß',
             2 => 'DifferentValue',
             3 => '1234567',
-        },
+        ],
     },
 );
 my $FieldMultiselectID = $DynamicFieldObject->DynamicFieldAdd(
@@ -652,7 +652,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -671,7 +671,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -691,7 +691,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -711,7 +711,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -734,7 +734,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -760,7 +760,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -788,7 +788,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -816,7 +816,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -845,7 +845,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -874,7 +874,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -904,7 +904,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -934,7 +934,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -965,7 +965,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -996,7 +996,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1026,7 +1026,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1057,7 +1057,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1088,7 +1088,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1120,7 +1120,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1152,7 +1152,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1185,7 +1185,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1218,7 +1218,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1251,7 +1251,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1285,7 +1285,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1319,7 +1319,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1353,7 +1353,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1388,7 +1388,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1423,7 +1423,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1459,7 +1459,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1495,7 +1495,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1532,7 +1532,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1569,7 +1569,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1613,7 +1613,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1653,7 +1653,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1698,7 +1698,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1742,7 +1742,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1786,7 +1786,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1831,7 +1831,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1877,7 +1877,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1924,7 +1924,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -1971,7 +1971,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -2019,7 +2019,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -2067,7 +2067,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -2116,7 +2116,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -2165,7 +2165,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -2215,7 +2215,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -2264,7 +2264,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -2315,7 +2315,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -2367,7 +2367,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -2420,7 +2420,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -2476,7 +2476,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -2530,7 +2530,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -2587,7 +2587,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -2642,7 +2642,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -2700,7 +2700,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -2756,7 +2756,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -2812,7 +2812,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -2868,7 +2868,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -2925,7 +2925,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -2982,7 +2982,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -3039,7 +3039,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -3096,7 +3096,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -3154,7 +3154,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.MissingParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -3213,7 +3213,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.InvalidParameter',
-                    }
+                }
             },
             Success => 1
         },
@@ -3693,7 +3693,7 @@ my @Tests        = (
             Data => {
                 Error => {
                     ErrorCode => 'TicketCreate.AccessDenied',
-                    }
+                }
             },
             Success => 1
         },

@@ -1,7 +1,7 @@
 # --
 # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
-# $origin: otrs - ca27120a296d64d7bea88b10ac94c7848bad89da - scripts/test/Ticket/TicketACL.t
+# $origin: otrs - 2ab9c4a88444da66afd8f87c8acd5db0b890d929 - scripts/test/Ticket/TicketACL.t
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
@@ -2735,7 +2735,7 @@ $Self->True(
         SuccessMatch     => 1,
         ReturnActionData => {
             1 => 'AgentTicketPrint',
-            }
+        }
     },
 
     # user based tests
@@ -3982,7 +3982,7 @@ my %TestModifiers = (
             Name => 'ACL User Role -  2 role check [regexp]unittest2',
             Role => ["[regexp]unittest2"]
         },
-        ]
+    ]
 );
 
 my $NumberOfTests = $#TestsNormal;
@@ -4213,7 +4213,7 @@ my @TestsNot = (
             Name => 'ACL User Role -  2 role check [Notregexp]unittest2',
             Role => ["[Notregexp]unittest2"]
         },
-        ]
+    ]
 );
 
 $NumberOfTests = $#TestsNot;

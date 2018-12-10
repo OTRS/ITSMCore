@@ -1,7 +1,7 @@
 # --
 # Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
 # --
-# $origin: otrs - ca27120a296d64d7bea88b10ac94c7848bad89da - scripts/test/GenericInterface/Operation/Ticket/TicketSearch.t
+# $origin: otrs - 2ab9c4a88444da66afd8f87c8acd5db0b890d929 - scripts/test/GenericInterface/Operation/Ticket/TicketSearch.t
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
@@ -1585,7 +1585,7 @@ for my $Test (@Tests) {
         Data         => {
             SessionID => $NewSessionID,
             %{ $Test->{RequestData} },
-            }
+        }
     );
 
     # check result
