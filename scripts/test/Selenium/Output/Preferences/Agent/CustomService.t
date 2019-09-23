@@ -1,7 +1,7 @@
 # --
 # Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
 # --
-# $origin: otrs - 9409633f822dde39ec6fa4b45f9861ed876fb2a6 - scripts/test/Selenium/Output/Preferences/Agent/CustomService.t
+# $origin: otrs - 54d22037d7b3026797bc06abbee2e2ddb8735754 - scripts/test/Selenium/Output/Preferences/Agent/CustomService.t
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
@@ -134,8 +134,9 @@ $Selenium->RunTest(
         );
 
         # add child service to 'My Services' preference
-        $Selenium->execute_script(
-            "\$('#ServiceID').val('$ServiceIDs[1]').trigger('redraw.InputField').trigger('change');"
+        $Selenium->InputFieldValueSet(
+            Element => '#ServiceID',
+            Value   => $ServiceIDs[1],
         );
         $Selenium->find_element( "#ServiceIDUpdate", 'css' )->VerifiedClick();
 
