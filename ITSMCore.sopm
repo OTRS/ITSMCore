@@ -6,105 +6,105 @@
     <Framework>3.3.x</Framework>
     <PackageRequired Version="3.3.14">GeneralCatalog</PackageRequired>
     <Vendor>OTRS AG</Vendor>
-    <URL>http://otrs.org/</URL>
-    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
+    <URL>https://otrs.com/</URL>
+    <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
     <Description Lang="en">The OTRS ITSM Core package.</Description>
     <Description Lang="de">Das OTRS ITSM Core Paket.</Description>
     <Filelist>
-        <File Permission="755" Location="bin/otrs.AddService.pl"/>
-        <File Permission="644" Location="doc/itsm-core-database.dia"/>
-        <File Permission="644" Location="doc/itsm-core-database.png"/>
-        <File Permission="644" Location="Kernel/Config/Files/FrameworkITSMCore.xml"/>
-        <File Permission="644" Location="Kernel/Config/Files/ITSMCore.xml"/>
-        <File Permission="644" Location="Kernel/Config/Files/ITSMService.xml"/>
-        <File Permission="644" Location="Kernel/Config/Files/TicketITSMService.xml"/>
-        <File Permission="644" Location="Kernel/Language/bg_ITSMCore.pm"/>
-        <File Permission="644" Location="Kernel/Language/cs_ITSMCore.pm"/>
-        <File Permission="644" Location="Kernel/Language/ct_ITSMCore.pm"/>
-        <File Permission="644" Location="Kernel/Language/da_ITSMCore.pm"/>
-        <File Permission="644" Location="Kernel/Language/de_ITSMCore.pm"/>
-        <File Permission="644" Location="Kernel/Language/es_ITSMCore.pm"/>
-        <File Permission="644" Location="Kernel/Language/fa_ITSMCore.pm"/>
-        <File Permission="644" Location="Kernel/Language/fr_ITSMCore.pm"/>
-        <File Permission="644" Location="Kernel/Language/it_ITSMCore.pm"/>
-        <File Permission="644" Location="Kernel/Language/ja_ITSMCore.pm"/>
-        <File Permission="644" Location="Kernel/Language/ms_ITSMCore.pm"/>
-        <File Permission="644" Location="Kernel/Language/nb_NO_ITSMCore.pm"/>
-        <File Permission="644" Location="Kernel/Language/nl_ITSMCore.pm"/>
-        <File Permission="644" Location="Kernel/Language/pl_ITSMCore.pm"/>
-        <File Permission="644" Location="Kernel/Language/pt_BR_ITSMCore.pm"/>
-        <File Permission="644" Location="Kernel/Language/pt_PT_ITSMCore.pm"/>
-        <File Permission="644" Location="Kernel/Language/ru_ITSMCore.pm"/>
-        <File Permission="644" Location="Kernel/Language/zh_CN_ITSMCore.pm"/>
-        <File Permission="644" Location="Kernel/Language/zh_TW_ITSMCore.pm"/>
-        <File Permission="644" Location="Kernel/Modules/AdminITSMCIPAllocate.pm"/>
-        <File Permission="644" Location="Kernel/Modules/AdminService.pm"/>
-        <File Permission="644" Location="Kernel/Modules/AdminSLA.pm"/>
-        <File Permission="644" Location="Kernel/Modules/AgentITSMService.pm"/>
-        <File Permission="644" Location="Kernel/Modules/AgentITSMServicePrint.pm"/>
-        <File Permission="644" Location="Kernel/Modules/AgentITSMServiceZoom.pm"/>
-        <File Permission="644" Location="Kernel/Modules/AgentITSMSLA.pm"/>
-        <File Permission="644" Location="Kernel/Modules/AgentITSMSLAPrint.pm"/>
-        <File Permission="644" Location="Kernel/Modules/AgentITSMSLAZoom.pm"/>
-        <File Permission="644" Location="Kernel/Output/HTML/ITSMServiceMenuGeneric.pm"/>
-        <File Permission="644" Location="Kernel/Output/HTML/ITSMServiceMenuLink.pm"/>
-        <File Permission="644" Location="Kernel/Output/HTML/ITSMSLAMenuGeneric.pm"/>
-        <File Permission="644" Location="Kernel/Output/HTML/LinkObjectService.pm"/>
-        <File Permission="644" Location="Kernel/Output/HTML/Standard/AAAITSMCore.dtl"/>
-        <File Permission="644" Location="Kernel/Output/HTML/Standard/AdminITSMCIPAllocate.dtl"/>
-        <File Permission="644" Location="Kernel/Output/HTML/Standard/AdminService.dtl"/>
-        <File Permission="644" Location="Kernel/Output/HTML/Standard/AdminSLA.dtl"/>
-        <File Permission="644" Location="Kernel/Output/HTML/Standard/AgentITSMCustomerSearch.dtl"/>
-        <File Permission="644" Location="Kernel/Output/HTML/Standard/AgentITSMService.dtl"/>
-        <File Permission="644" Location="Kernel/Output/HTML/Standard/AgentITSMServicePrint.dtl"/>
-        <File Permission="644" Location="Kernel/Output/HTML/Standard/AgentITSMServiceZoom.dtl"/>
-        <File Permission="644" Location="Kernel/Output/HTML/Standard/AgentITSMSLA.dtl"/>
-        <File Permission="644" Location="Kernel/Output/HTML/Standard/AgentITSMSLAPrint.dtl"/>
-        <File Permission="644" Location="Kernel/Output/HTML/Standard/AgentITSMSLAZoom.dtl"/>
-        <File Permission="644" Location="Kernel/System/LinkObject/Service.pm"/>
-        <File Permission="644" Location="Kernel/System/ITSMCIPAllocate.pm"/>
-        <File Permission="644" Location="Kernel/System/Service.pm"/>
-        <File Permission="644" Location="Kernel/System/SLA.pm"/>
-        <File Permission="644" Location="scripts/test/CustomerUserService.t"/>
-        <File Permission="644" Location="scripts/test/ITSMCIPAllocate.t"/>
-        <File Permission="644" Location="scripts/test/Service.t"/>
-        <File Permission="644" Location="scripts/test/SLA.t"/>
-        <File Permission="644" Location="var/httpd/htdocs/js/ITSM.Agent.CustomerSearch.js"/>
-        <File Permission="644" Location="var/httpd/htdocs/js/ITSM.Agent.IncidentState.js"/>
-        <File Permission="644" Location="var/httpd/htdocs/js/ITSM.Agent.Zoom.js"/>
-        <File Permission="644" Location="var/httpd/htdocs/skins/Agent/default/css/ITSM.Agent.Default.css"/>
-        <File Permission="644" Location="var/httpd/htdocs/skins/Agent/default/css/ITSM.Agent.Detail.css"/>
-        <File Permission="644" Location="var/httpd/htdocs/skins/Agent/default/css/ITSM.Agent.Detail.IE7.css"/>
-        <File Permission="644" Location="var/httpd/htdocs/skins/Agent/default/css/ITSM.Agent.Search.css"/>
-        <File Permission="644" Location="var/httpd/htdocs/skins/Agent/default/css/ITSM.Print.css"/>
-        <File Permission="644" Location="var/httpd/htdocs/skins/Agent/default/css/ITSM.Table.css"/>
-        <File Permission="644" Location="var/packagesetup/ITSMCore.pm"/>
+        <File Permission="755" Location="bin/otrs.AddService.pl" />
+        <File Permission="644" Location="doc/itsm-core-database.dia" />
+        <File Permission="644" Location="doc/itsm-core-database.png" />
+        <File Permission="644" Location="Kernel/Config/Files/FrameworkITSMCore.xml" />
+        <File Permission="644" Location="Kernel/Config/Files/ITSMCore.xml" />
+        <File Permission="644" Location="Kernel/Config/Files/ITSMService.xml" />
+        <File Permission="644" Location="Kernel/Config/Files/TicketITSMService.xml" />
+        <File Permission="644" Location="Kernel/Language/bg_ITSMCore.pm" />
+        <File Permission="644" Location="Kernel/Language/cs_ITSMCore.pm" />
+        <File Permission="644" Location="Kernel/Language/ct_ITSMCore.pm" />
+        <File Permission="644" Location="Kernel/Language/da_ITSMCore.pm" />
+        <File Permission="644" Location="Kernel/Language/de_ITSMCore.pm" />
+        <File Permission="644" Location="Kernel/Language/es_ITSMCore.pm" />
+        <File Permission="644" Location="Kernel/Language/fa_ITSMCore.pm" />
+        <File Permission="644" Location="Kernel/Language/fr_ITSMCore.pm" />
+        <File Permission="644" Location="Kernel/Language/it_ITSMCore.pm" />
+        <File Permission="644" Location="Kernel/Language/ja_ITSMCore.pm" />
+        <File Permission="644" Location="Kernel/Language/ms_ITSMCore.pm" />
+        <File Permission="644" Location="Kernel/Language/nb_NO_ITSMCore.pm" />
+        <File Permission="644" Location="Kernel/Language/nl_ITSMCore.pm" />
+        <File Permission="644" Location="Kernel/Language/pl_ITSMCore.pm" />
+        <File Permission="644" Location="Kernel/Language/pt_BR_ITSMCore.pm" />
+        <File Permission="644" Location="Kernel/Language/pt_PT_ITSMCore.pm" />
+        <File Permission="644" Location="Kernel/Language/ru_ITSMCore.pm" />
+        <File Permission="644" Location="Kernel/Language/zh_CN_ITSMCore.pm" />
+        <File Permission="644" Location="Kernel/Language/zh_TW_ITSMCore.pm" />
+        <File Permission="644" Location="Kernel/Modules/AdminITSMCIPAllocate.pm" />
+        <File Permission="644" Location="Kernel/Modules/AdminService.pm" />
+        <File Permission="644" Location="Kernel/Modules/AdminSLA.pm" />
+        <File Permission="644" Location="Kernel/Modules/AgentITSMService.pm" />
+        <File Permission="644" Location="Kernel/Modules/AgentITSMServicePrint.pm" />
+        <File Permission="644" Location="Kernel/Modules/AgentITSMServiceZoom.pm" />
+        <File Permission="644" Location="Kernel/Modules/AgentITSMSLA.pm" />
+        <File Permission="644" Location="Kernel/Modules/AgentITSMSLAPrint.pm" />
+        <File Permission="644" Location="Kernel/Modules/AgentITSMSLAZoom.pm" />
+        <File Permission="644" Location="Kernel/Output/HTML/ITSMServiceMenuGeneric.pm" />
+        <File Permission="644" Location="Kernel/Output/HTML/ITSMServiceMenuLink.pm" />
+        <File Permission="644" Location="Kernel/Output/HTML/ITSMSLAMenuGeneric.pm" />
+        <File Permission="644" Location="Kernel/Output/HTML/LinkObjectService.pm" />
+        <File Permission="644" Location="Kernel/Output/HTML/Standard/AAAITSMCore.dtl" />
+        <File Permission="644" Location="Kernel/Output/HTML/Standard/AdminITSMCIPAllocate.dtl" />
+        <File Permission="644" Location="Kernel/Output/HTML/Standard/AdminService.dtl" />
+        <File Permission="644" Location="Kernel/Output/HTML/Standard/AdminSLA.dtl" />
+        <File Permission="644" Location="Kernel/Output/HTML/Standard/AgentITSMCustomerSearch.dtl" />
+        <File Permission="644" Location="Kernel/Output/HTML/Standard/AgentITSMService.dtl" />
+        <File Permission="644" Location="Kernel/Output/HTML/Standard/AgentITSMServicePrint.dtl" />
+        <File Permission="644" Location="Kernel/Output/HTML/Standard/AgentITSMServiceZoom.dtl" />
+        <File Permission="644" Location="Kernel/Output/HTML/Standard/AgentITSMSLA.dtl" />
+        <File Permission="644" Location="Kernel/Output/HTML/Standard/AgentITSMSLAPrint.dtl" />
+        <File Permission="644" Location="Kernel/Output/HTML/Standard/AgentITSMSLAZoom.dtl" />
+        <File Permission="644" Location="Kernel/System/LinkObject/Service.pm" />
+        <File Permission="644" Location="Kernel/System/ITSMCIPAllocate.pm" />
+        <File Permission="644" Location="Kernel/System/Service.pm" />
+        <File Permission="644" Location="Kernel/System/SLA.pm" />
+        <File Permission="644" Location="scripts/test/CustomerUserService.t" />
+        <File Permission="644" Location="scripts/test/ITSMCIPAllocate.t" />
+        <File Permission="644" Location="scripts/test/Service.t" />
+        <File Permission="644" Location="scripts/test/SLA.t" />
+        <File Permission="644" Location="var/httpd/htdocs/js/ITSM.Agent.CustomerSearch.js" />
+        <File Permission="644" Location="var/httpd/htdocs/js/ITSM.Agent.IncidentState.js" />
+        <File Permission="644" Location="var/httpd/htdocs/js/ITSM.Agent.Zoom.js" />
+        <File Permission="644" Location="var/httpd/htdocs/skins/Agent/default/css/ITSM.Agent.Default.css" />
+        <File Permission="644" Location="var/httpd/htdocs/skins/Agent/default/css/ITSM.Agent.Detail.css" />
+        <File Permission="644" Location="var/httpd/htdocs/skins/Agent/default/css/ITSM.Agent.Detail.IE7.css" />
+        <File Permission="644" Location="var/httpd/htdocs/skins/Agent/default/css/ITSM.Agent.Search.css" />
+        <File Permission="644" Location="var/httpd/htdocs/skins/Agent/default/css/ITSM.Print.css" />
+        <File Permission="644" Location="var/httpd/htdocs/skins/Agent/default/css/ITSM.Table.css" />
+        <File Permission="644" Location="var/packagesetup/ITSMCore.pm" />
     </Filelist>
     <DatabaseInstall Type="post">
         <TableCreate Name="cip_allocate">
-            <Column Name="id" Required="true" PrimaryKey="true" AutoIncrement="true" Type="BIGINT"/>
-            <Column Name="criticality" Required="true" Size="200" Type="VARCHAR"/>
-            <Column Name="impact" Required="true" Size="200" Type="VARCHAR"/>
-            <Column Name="priority_id" Required="true" Type="SMALLINT"/>
-            <Column Name="create_time" Required="false" Type="DATE"/>
-            <Column Name="create_by" Required="false" Type="INTEGER"/>
-            <Column Name="change_time" Required="false" Type="DATE"/>
-            <Column Name="change_by" Required="false" Type="INTEGER"/>
+            <Column Name="id" Required="true" PrimaryKey="true" AutoIncrement="true" Type="BIGINT" />
+            <Column Name="criticality" Required="true" Size="200" Type="VARCHAR" />
+            <Column Name="impact" Required="true" Size="200" Type="VARCHAR" />
+            <Column Name="priority_id" Required="true" Type="SMALLINT" />
+            <Column Name="create_time" Required="false" Type="DATE" />
+            <Column Name="create_by" Required="false" Type="INTEGER" />
+            <Column Name="change_time" Required="false" Type="DATE" />
+            <Column Name="change_by" Required="false" Type="INTEGER" />
             <ForeignKey ForeignTable="ticket_priority">
-                <Reference Local="priority_id" Foreign="id"/>
+                <Reference Local="priority_id" Foreign="id" />
             </ForeignKey>
             <ForeignKey ForeignTable="users">
-                <Reference Local="create_by" Foreign="id"/>
-                <Reference Local="change_by" Foreign="id"/>
+                <Reference Local="create_by" Foreign="id" />
+                <Reference Local="change_by" Foreign="id" />
             </ForeignKey>
         </TableCreate>
         <TableAlter Name="service">
-            <ColumnAdd Name="type_id" Required="false" Type="INTEGER"/>
-            <ColumnAdd Name="criticality" Required="false" Size="200" Type="VARCHAR"/>
+            <ColumnAdd Name="type_id" Required="false" Type="INTEGER" />
+            <ColumnAdd Name="criticality" Required="false" Size="200" Type="VARCHAR" />
         </TableAlter>
         <TableAlter Name="sla">
-            <ColumnAdd Name="type_id" Required="false" Type="INTEGER"/>
-            <ColumnAdd Name="min_time_bet_incidents" Required="false" Type="INTEGER"/>
+            <ColumnAdd Name="type_id" Required="false" Type="INTEGER" />
+            <ColumnAdd Name="min_time_bet_incidents" Required="false" Type="INTEGER" />
         </TableAlter>
         <Insert Table="general_catalog">
             <Data Key="general_catalog_class" Type="Quote">ITSM::Core::IncidentState</Data>
@@ -299,27 +299,27 @@
     <DatabaseUpgrade Type="post">
         <TableAlter Name="cip_allocate" Version="3.2.91">
             <ForeignKeyDrop ForeignTable="general_catalog">
-                <Reference Local="criticality_id" Foreign="id"/>
-                <Reference Local="impact_id" Foreign="id"/>
+                <Reference Local="criticality_id" Foreign="id" />
+                <Reference Local="impact_id" Foreign="id" />
             </ForeignKeyDrop>
         </TableAlter>
         <TableAlter Name="cip_allocate" Version="3.2.91">
-            <ColumnAdd Name="criticality" Required="true" Size="200" Type="VARCHAR"/>
-            <ColumnAdd Name="impact" Required="true" Size="200" Type="VARCHAR"/>
+            <ColumnAdd Name="criticality" Required="true" Size="200" Type="VARCHAR" />
+            <ColumnAdd Name="impact" Required="true" Size="200" Type="VARCHAR" />
         </TableAlter>
         <TableAlter Name="service" Version="3.2.91">
-            <ColumnAdd Name="criticality" Required="false" Size="200" Type="VARCHAR"/>
+            <ColumnAdd Name="criticality" Required="false" Size="200" Type="VARCHAR" />
         </TableAlter>
     </DatabaseUpgrade>
     <DatabaseUninstall Type="pre">
-        <TableDrop Name="cip_allocate"/>
+        <TableDrop Name="cip_allocate" />
         <TableAlter Name="service">
-            <ColumnDrop Name="type_id"/>
-            <ColumnDrop Name="criticality"/>
+            <ColumnDrop Name="type_id" />
+            <ColumnDrop Name="criticality" />
         </TableAlter>
         <TableAlter Name="sla">
-            <ColumnDrop Name="type_id"/>
-            <ColumnDrop Name="min_time_bet_incidents"/>
+            <ColumnDrop Name="type_id" />
+            <ColumnDrop Name="min_time_bet_incidents" />
         </TableAlter>
     </DatabaseUninstall>
     <CodeInstall Type="post"><![CDATA[
