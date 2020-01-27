@@ -1,7 +1,7 @@
 # --
 # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
 # --
-# $origin: otrs - 9409633f822dde39ec6fa4b45f9861ed876fb2a6 - scripts/test/Ticket.t
+# $origin: otrs - d58b5ce855ef55a2c541fc9186218a9a0d54aa12 - scripts/test/Ticket.t
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
@@ -289,7 +289,7 @@ for my $Key (qw( Body Subject From To ReplyTo )) {
 }
 
 my $TicketSearchTicketNumber = substr $Ticket{TicketNumber}, 0, 10;
-my %TicketIDs                = $TicketObject->TicketSearch(
+my %TicketIDs = $TicketObject->TicketSearch(
     Result       => 'HASH',
     Limit        => 100,
     TicketNumber => [ $TicketSearchTicketNumber . '%', '%not exisiting%' ],

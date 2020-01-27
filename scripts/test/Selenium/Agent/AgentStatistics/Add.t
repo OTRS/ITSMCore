@@ -1,7 +1,7 @@
 # --
 # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
 # --
-# $origin: otrs - 957a512bf9552b9d304a865b02b80aa15bb5c9c2 - scripts/test/Selenium/Agent/AgentStatistics/Add.t
+# $origin: otrs - 109951608f444dd90bfe4956ad63c49112a4d0d6 - scripts/test/Selenium/Agent/AgentStatistics/Add.t
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
