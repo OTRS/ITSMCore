@@ -1,7 +1,7 @@
 # --
 # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
 # --
-# $origin: otrs - 77d4495533edfdbd2370353edad87839ee636357 - Kernel/Modules/AdminService.pm
+# $origin: otrs - 4b5de865d1ad6c6a22b5bb35755d5ace2eab7d7b - Kernel/Modules/AdminService.pm
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
@@ -130,7 +130,7 @@ sub Run {
 
         if ( length $ServiceName > 200 ) {
             $Error{'NameInvalid'} = 'ServerError';
-            $Error{LongName} = 1;
+            $Error{LongName}      = 1;
         }
 
         if ( !%Error ) {
